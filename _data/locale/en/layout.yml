@@ -1,0 +1,71 @@
+navigation:
+- label: "About"
+  type: "dropdown"
+  pages:
+  - label: "Usage"
+    url: "/en/usage"
+    icon_type: "book"
+    icon_category: "fas"
+
+  - label: "Features"
+    url: "/en/features/"
+    icon_type: "info"
+    icon_category: "fas"
+
+  - label: "Screenshots"
+    url: "/en/screenshots/"
+    icon_type: "image"
+    icon_category: "fas"
+
+  - label: "Contributors"
+    url: "/en/contributors"
+    icon_type: "users"
+    icon_category: "fas"
+
+- label: "Documentation"
+  type: "dropdown"
+  pages:
+  - label: "Build"
+    url: "/en/build/"
+    icon_type: "code"
+    icon_category: "fas"
+
+- label: "Downloads"
+  url: "/en/downloads/"
+  icon_type: "download"
+  icon_category: "fas"
+
+cards:
+- label: "Follow Us"
+  links:
+  - label: "GitHub"
+    url: "https://github.com/lite-xl/"
+    icon_type: "github"
+    icon_category: "fab"
+
+  - label: "Discord"
+    url: "https://discord.gg/SR4ArdYr"
+    icon_type: "discord"
+    icon_category: "fab"
+
+  - label: "IRC"
+    url: "https://kiwiirc.com/nextclient/#irc://irc.libera.chat:+6697/#lite-xl"
+    icon_type: "hashtag"
+    icon_category: "fas"
+
+  - label: "Feed"
+    url: "/atom.xml"
+    icon_type: "rss"
+    icon_category: "fas"
+
+- label: "Getting Started"
+  links:
+  - label: "Wiki"
+    url: "https://github.com/lite-xl/lite-xl/wiki/"
+    icon_type: "book"
+    icon_category: "fas"
+
+  - label: "Issue Tracker"
+    url: "https://github.com/lite-xl/lite-xl/issues/"
+    icon_type: "bug"
+    icon_category: "fas"

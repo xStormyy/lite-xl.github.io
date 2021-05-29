@@ -1,0 +1,57 @@
+[
+  {
+    "name": "rxi",
+    "url": "https://github.com/rxi",
+    "contributions": "Original development of lite editor."
+  },
+  {
+    "name": "Francesco",
+    "url": "https://github.com/franko",
+    "contributions": "Creator of lite-xl fork from rxi/lite."
+  },
+  {
+    "name": "Takase",
+    "url": "https://github.com/takase1121",
+    "contributions": "NagView and X Window database resource query for Xft.dpi setting."
+  },
+  {
+    "name": "Nils Kvist",
+    "url": "https://github.com/budRich",
+    "contributions": "Popup window replacement with CommandView dialog."
+  },
+  {
+    "name": "liquidev",
+    "url" : "https://github.com/liquidev",
+    "contributions": "Tab style and animations improvements."
+  },
+  {
+    "name": "Adam",
+    "url": "https://github.com/adamharrison",
+    "contributions": "Multi-language syntax highlighting and many other improvements."
+  },
+  {
+    "name": "Cukmekerb",
+    "url": "https://github.com/vincens2005",
+    "contributions": "Syntax highlighting improvements."
+  },
+  {
+    "name": "Janis-Leuenberger",
+    "url": "https://github.com/Janis-Leuenberger",
+    "contributions": "Add keymap bindings help file and macOS testing."
+  },
+  {
+    "name": "Mat Mariani",
+    "url": "https://github.com/",
+    "contributions": "Help for macOS port. Some resources taken from mathewmariani/lite-macos."
+  },
+  {
+    "name": "daubaris",
+    "url": "https://github.com/daubaris",
+    "contributions": "Initial implementation of Xft.dpi query using xrdb command."
+  },
+  {
+    "name": "Robert Štojs",
+    "url": "https://github.com/netrobert",
+    "contributions": "Continuos integration configuration."
+  }
+]

@@ -1,0 +1,27 @@
+
+<table
+	id="table-team"
+	class="table table-sm table-hover"
+	data-toggle="table">
+	<thead>
+		<tr>
+			<th
+				data-field="name"
+				data-sortable="true"
+			>
+				<span data-localize="team_name">Name</span>
+			</th>
+			<th>
+				<span data-localize="team_contrib">Contributions</span>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+{%-for user in site.data[include.data]-%}
+		<tr>
+			<td><a target="_blank" href="{{ user.url }}">{{ user.name }}</a></td>
+			<td>{{ user.contributions }}</td>
+		</tr>
+{%-endfor-%}
+	</tbody>
+</table>
