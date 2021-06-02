@@ -1,0 +1,27 @@
+
+<table
+	id="table-team"
+	class="table table-sm table-hover"
+	data-toggle="table">
+	<thead>
+		<tr>
+			<th
+				data-field="name"
+				data-sortable="true"
+			>
+				<span data-localize="team_name">Key combination</span>
+			</th>
+			<th>
+				<span data-localize="team_contrib">Actions</span>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+{%-for key in site.data.keymap-%}
+		<tr>
+			<td>{{ key.combination }}</td>
+			<td>{{ key.action }}</td>
+		</tr>
+{%-endfor-%}
+	</tbody>
+</table>

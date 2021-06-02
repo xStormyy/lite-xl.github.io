@@ -1,0 +1,430 @@
+[
+  {
+    "combination": "ctrl+shift+p",
+    "action": "core:find-command"
+  },
+  {
+    "combination": "ctrl+p",
+    "action": "core:find-file"
+  },
+  {
+    "combination": "ctrl+o",
+    "action": "core:open-file"
+  },
+  {
+    "combination": "ctrl+n",
+    "action": "core:new-doc"
+  },
+  {
+    "combination": "ctrl+shift+c",
+    "action": "core:change-project-folder"
+  },
+  {
+    "combination": "ctrl+shift+o",
+    "action": "core:open-project-folder"
+  },
+  {
+    "combination": "alt+return",
+    "action": "core:toggle-fullscreen"
+  },
+  {
+    "combination": "alt+shift+j",
+    "action": "root:split-left"
+  },
+  {
+    "combination": "alt+shift+l",
+    "action": "root:split-right"
+  },
+  {
+    "combination": "alt+shift+i",
+    "action": "root:split-up"
+  },
+  {
+    "combination": "alt+shift+k",
+    "action": "root:split-down"
+  },
+  {
+    "combination": "alt+j",
+    "action": "root:switch-to-left"
+  },
+  {
+    "combination": "alt+l",
+    "action": "root:switch-to-right"
+  },
+  {
+    "combination": "alt+i",
+    "action": "root:switch-to-up"
+  },
+  {
+    "combination": "alt+k",
+    "action": "root:switch-to-down"
+  },
+  {
+    "combination": "ctrl+w",
+    "action": "root:close"
+  },
+  {
+    "combination": "ctrl+tab",
+    "action": "root:switch-to-next-tab"
+  },
+  {
+    "combination": "ctrl+shift+tab",
+    "action": "root:switch-to-previous-tab"
+  },
+  {
+    "combination": "ctrl+pageup",
+    "action": "root:move-tab-left"
+  },
+  {
+    "combination": "ctrl+pagedown",
+    "action": "root:move-tab-right"
+  },
+  {
+    "combination": "alt+1",
+    "action": "root:switch-to-tab-1"
+  },
+  {
+    "combination": "alt+2",
+    "action": "root:switch-to-tab-2"
+  },
+  {
+    "combination": "alt+3",
+    "action": "root:switch-to-tab-3"
+  },
+  {
+    "combination": "alt+4",
+    "action": "root:switch-to-tab-4"
+  },
+  {
+    "combination": "alt+5",
+    "action": "root:switch-to-tab-5"
+  },
+  {
+    "combination": "alt+6",
+    "action": "root:switch-to-tab-6"
+  },
+  {
+    "combination": "alt+7",
+    "action": "root:switch-to-tab-7"
+  },
+  {
+    "combination": "alt+8",
+    "action": "root:switch-to-tab-8"
+  },
+  {
+    "combination": "alt+9",
+    "action": "root:switch-to-tab-9"
+  },
+  {
+    "combination": "ctrl+f",
+    "action": "find-replace:find"
+  },
+  {
+    "combination": "ctrl+r",
+    "action": "find-replace:replace"
+  },
+  {
+    "combination": "f3",
+    "action": "find-replace:repeat-find"
+  },
+  {
+    "combination": "shift+f3",
+    "action": "find-replace:previous-find"
+  },
+  {
+    "combination": "ctrl+g",
+    "action": "doc:go-to-line"
+  },
+  {
+    "combination": "ctrl+s",
+    "action": "doc:save"
+  },
+  {
+    "combination": "ctrl+shift+s",
+    "action": "doc:save-as"
+  },
+  {
+    "combination": "ctrl+z",
+    "action": "doc:undo"
+  },
+  {
+    "combination": "ctrl+y",
+    "action": "doc:redo"
+  },
+  {
+    "combination": "ctrl+x",
+    "action": "doc:cut"
+  },
+  {
+    "combination": "ctrl+c",
+    "action": "doc:copy"
+  },
+  {
+    "combination": "ctrl+v",
+    "action": "doc:paste"
+  },
+  {
+    "combination": "ctrl+insert",
+    "action": "doc:copy"
+  },
+  {
+    "combination": "shift+insert",
+    "action": "doc:paste"
+  },
+  {
+    "combination": "escape",
+    "action": "command:escape"
+  },
+  {
+    "combination": "escape",
+    "action": "doc:select-none"
+  },
+  {
+    "combination": "escape",
+    "action": "dialog:select-no"
+  },
+  {
+    "combination": "tab",
+    "action": "command:complete"
+  },
+  {
+    "combination": "tab",
+    "action": "doc:indent"
+  },
+  {
+    "combination": "shift+tab",
+    "action": "doc:unindent"
+  },
+  {
+    "combination": "backspace",
+    "action": "doc:backspace"
+  },
+  {
+    "combination": "shift+backspace",
+    "action": "doc:backspace"
+  },
+  {
+    "combination": "ctrl+backspace",
+    "action": "doc:delete-to-previous-word-start"
+  },
+  {
+    "combination": "ctrl+shift+backspace",
+    "action": "doc:delete-to-previous-word-start"
+  },
+  {
+    "combination": "delete",
+    "action": "doc:delete"
+  },
+  {
+    "combination": "shift+delete",
+    "action": "doc:delete"
+  },
+  {
+    "combination": "ctrl+delete",
+    "action": "doc:delete-to-next-word-end"
+  },
+  {
+    "combination": "ctrl+shift+delete",
+    "action": "doc:delete-to-next-word-end"
+  },
+  {
+    "combination": "return",
+    "action": "command:submit"
+  },
+  {
+    "combination": "return",
+    "action": "doc:newline"
+  },
+  {
+    "combination": "return",
+    "action": "dialog:select"
+  },
+  {
+    "combination": "keypadenter",
+    "action": "command:submit"
+  },
+  {
+    "combination": "keypadenter",
+    "action": "doc:newline"
+  },
+  {
+    "combination": "keypadenter",
+    "action": "dialog:select"
+  },
+  {
+    "combination": "ctrl+return",
+    "action": "doc:newline-below"
+  },
+  {
+    "combination": "ctrl+shift+return",
+    "action": "doc:newline-above"
+  },
+  {
+    "combination": "ctrl+j",
+    "action": "doc:join-lines"
+  },
+  {
+    "combination": "ctrl+a",
+    "action": "doc:select-all"
+  },
+  {
+    "combination": "ctrl+d",
+    "action": "find-replace:select-next"
+  },
+  {
+    "combination": "ctrl+d",
+    "action": "doc:select-word"
+  },
+  {
+    "combination": "ctrl+l",
+    "action": "doc:select-lines"
+  },
+  {
+    "combination": "ctrl+/",
+    "action": "doc:toggle-line-comments"
+  },
+  {
+    "combination": "ctrl+up",
+    "action": "doc:move-lines-up"
+  },
+  {
+    "combination": "ctrl+down",
+    "action": "doc:move-lines-down"
+  },
+  {
+    "combination": "ctrl+shift+d",
+    "action": "doc:duplicate-lines"
+  },
+  {
+    "combination": "ctrl+shift+k",
+    "action": "doc:delete-lines"
+  },
+  {
+    "combination": "left",
+    "action": "doc:move-to-previous-char"
+  },
+  {
+    "combination": "left",
+    "action": "dialog:previous-entry"
+  },
+  {
+    "combination": "right",
+    "action": "doc:move-to-next-char"
+  },
+  {
+    "combination": "right",
+    "action": "dialog:next-entry"
+  },
+  {
+    "combination": "up",
+    "action": "command:select-previous"
+  },
+  {
+    "combination": "up",
+    "action": "doc:move-to-previous-line"
+  },
+  {
+    "combination": "down",
+    "action": "command:select-next"
+  },
+  {
+    "combination": "down",
+    "action": "doc:move-to-next-line"
+  },
+  {
+    "combination": "ctrl+left",
+    "action": "doc:move-to-previous-word-start"
+  },
+  {
+    "combination": "ctrl+right",
+    "action": "doc:move-to-next-word-end"
+  },
+  {
+    "combination": "ctrl+[",
+    "action": "doc:move-to-previous-block-start"
+  },
+  {
+    "combination": "ctrl+]",
+    "action": "doc:move-to-next-block-end"
+  },
+  {
+    "combination": "home",
+    "action": "doc:move-to-start-of-line"
+  },
+  {
+    "combination": "end",
+    "action": "doc:move-to-end-of-line"
+  },
+  {
+    "combination": "ctrl+home",
+    "action": "doc:move-to-start-of-doc"
+  },
+  {
+    "combination": "ctrl+end",
+    "action": "doc:move-to-end-of-doc"
+  },
+  {
+    "combination": "pageup",
+    "action": "doc:move-to-previous-page"
+  },
+  {
+    "combination": "pagedown",
+    "action": "doc:move-to-next-page"
+  },
+  {
+    "combination": "shift+left",
+    "action": "doc:select-to-previous-char"
+  },
+  {
+    "combination": "shift+right",
+    "action": "doc:select-to-next-char"
+  },
+  {
+    "combination": "shift+up",
+    "action": "doc:select-to-previous-line"
+  },
+  {
+    "combination": "shift+down",
+    "action": "doc:select-to-next-line"
+  },
+  {
+    "combination": "ctrl+shift+left",
+    "action": "doc:select-to-previous-word-start"
+  },
+  {
+    "combination": "ctrl+shift+right",
+    "action": "doc:select-to-next-word-end"
+  },
+  {
+    "combination": "ctrl+shift+[",
+    "action": "doc:select-to-previous-block-start"
+  },
+  {
+    "combination": "ctrl+shift+]",
+    "action": "doc:select-to-next-block-end"
+  },
+  {
+    "combination": "shift+home",
+    "action": "doc:select-to-start-of-line"
+  },
+  {
+    "combination": "shift+end",
+    "action": "doc:select-to-end-of-line"
+  },
+  {
+    "combination": "ctrl+shift+home",
+    "action": "doc:select-to-start-of-doc"
+  },
+  {
+    "combination": "ctrl+shift+end",
+    "action": "doc:select-to-end-of-doc"
+  },
+  {
+    "combination": "shift+pageup",
+    "action": "doc:select-to-previous-page"
+  },
+  {
+    "combination": "shift+pagedown",
+    "action": "doc:select-to-next-page"
+  }
+]

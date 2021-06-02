@@ -2,11 +2,6 @@ navigation:
 - label: "About"
   type: "dropdown"
   pages:
-  - label: "Usage"
-    url: "/en/usage"
-    icon_type: "book"
-    icon_category: "fas"
-
   - label: "Features"
     url: "/en/features/"
     icon_type: "info"
@@ -25,9 +20,19 @@ navigation:
 - label: "Documentation"
   type: "dropdown"
   pages:
+  - label: "Usage"
+    url: "/en/usage"
+    icon_type: "book"
+    icon_category: "fas"
+
   - label: "Build"
     url: "/en/build/"
     icon_type: "code"
+    icon_category: "fas"
+
+  - label: "Keymap"
+    url: "/en/keymap"
+    icon_type: "keyboard"
     icon_category: "fas"
 
 - label: "Downloads"

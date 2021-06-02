@@ -2,9 +2,10 @@
 title: "Usage"
 ---
 
-![screenshot](https://user-images.githubusercontent.com/3920290/81471642-6c165880-91ea-11ea-8cd1-fae7ae8f0bc4.png)
+![screenshot]
 
 ## Overview
+
 Lite is a lightweight text editor written mostly in Lua — it aims to provide
 something practical, pretty, *small* and fast, implemented as simply as
 possible; easy to modify and extend, or to use without doing either.
@@ -12,8 +13,8 @@ possible; easy to modify and extend, or to use without doing either.
 Lite XL is based on the Lite editor itself and provide some enhancements
 while remaining generally compatible with Lite.
 
-
 ## Getting Started
+
 Lite works using a *project directory* — this is the directory where your
 project's code and other data resides.
 
@@ -41,8 +42,8 @@ document. The current keyboard shortcut for a command can be seen to the right
 of the command name on the command finder, thus to find the shortcut for a command
 `ctrl+shift+p` can be pressed and the command name typed.
 
-
 ## User Module
+
 lite can be configured through use of the user module. The user module can be
 used for changing options in the config module, adding additional key bindings,
 loading custom color themes, modifying the style or changing any other part of
@@ -61,6 +62,7 @@ Please note that Lite XL differs from the standard Lite editor for the location
 of the user's module.
 
 ## Project Module
+
 The project module is an optional module which is loaded from the current
 project's directory when lite is started. Project modules can be useful for
 things like adding custom commands for project-specific build systems, or
@@ -89,16 +91,16 @@ remember your workspace including the additonal project directories.
 Since version 1.15 Lite XL does not need a workspace plugin as it is now
 bundled with the editor.
 
-
 ## Create new empty directory
 
 Using the command `files:create-directory` or control-click in a directory in the
 tree-view to create a new empty subdirectory.
 
-
 ## Commands
+
 Commands in lite are used both through the command finder (`ctrl+shift+p`) and
 by lite's keyboard shortcut system. Commands consist of 3 components:
+
 * **Name** — The command name in the form of `namespace:action-name`, for
   example: `doc:select-all`
 * **Predicate** — A function that returns true if the command can be ran, for
@@ -108,6 +110,7 @@ by lite's keyboard shortcut system. Commands consist of 3 components:
 
 Commands can be added using the `command.add` function provided by the
 `core.command` module:
+
 ```lua
 local core = require "core"
 local command = require "core.command"
@@ -123,13 +126,14 @@ command.add("core.docview", {
 Commands can be performed programatically (eg. from another command or by your
 user module) by calling the `command.perform` function after requiring the
 `command` module:
+
 ```lua
 local command = require "core.command"
 command.perform "core:quit"
 ```
 
-
 ## Keymap
+
 All keyboard shortcuts in lite are handled by the `core.keymap` module. A key
 binding in lite maps a "stroke" (eg. `ctrl+q`) to one or more commands (eg.
 `core:quit`). When the shortcut is pressed lite will iterate each command
@@ -137,24 +141,27 @@ assigned to that key and run the *predicate function* for that command — if th
 predicate passes it stops iterating and runs the command.
 
 An example of where this used is the default binding of the `tab` key:
+
 ``` lua
   ["tab"] = { "command:complete", "doc:indent" },
 ```
+
 When tab is pressed the `command:complete` command is attempted which will only
 succeed if the command-input at the bottom of the window is active. Otherwise
 the `doc:indent` command is attempted which will only succeed if we have a
 document as our active view.
 
 A new mapping can be added by your user module as follows:
+
 ```lua
 local keymap = require "core.keymap"
 keymap.add { ["ctrl+q"] = "core:quit" }
 ```
 
-A list of default mappings can be viewed [here](./default-keymap.md).
-
+A list of default mappings can be viewed [here].
 
 ## Plugins
+
 Plugins in lite are normal lua modules and are treated as such — no
 complicated plugin manager is provided, and, once a plugin is loaded, it is never
 expected be to have to unload itself.
@@ -173,8 +180,7 @@ only on a given project) the plugin can be placed somewhere other than the
 `plugins` directory so that it is not automatically loaded. The plugin can
 then be loaded manually as needed by using the `require` function.
 
-Plugins can be downloaded from the [plugins repository](https://github.com/rxi/lite-plugins).
-
+Plugins can be downloaded from the [plugins repository].
 
 ## Restarting the editor
 
@@ -182,8 +188,8 @@ If you modifies the user configuration file or some of the Lua implementation fi
 restart the editor using the command `core:restart`.
 All the application will be restarting by keeping the window that is already in use.
 
-
 ## Color Themes
+
 Colors themes in lite are lua modules which overwrite the color fields of lite's
 `core.style` module.
 Pre-defined color methods are located in the `colors` folder in the data directory.
@@ -191,6 +197,7 @@ Additional color themes can be installed in the user's directory in a folder nam
 `colors`.
 
 A color theme can be set by requiring it in your user module:
+
 ```lua
 core.reload_module "colors.winter"
 ```
@@ -199,6 +206,10 @@ In the Lite editor the function `require` is used instead of `core.reload_module
 In Lite XL `core.reload_module` should be used to ensure that the color module
 is actually reloaded when saving the user's configuration file.
 
-Color themes can be downloaded from the [color themes repository](https://github.com/rxi/lite-colors).
+Color themes can be downloaded from the [color themes repository].
 They are included with Lite XL release packages.
 
+[screenshot]:              {{ 'assets/img/screenshots/editor2.png' | relative_url }}
+[here]:                    keymap
+[plugins repository]:      https://github.com/rxi/lite-plugins
+[color themes repository]: https://github.com/rxi/lite-colors
