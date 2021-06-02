@@ -28,6 +28,10 @@
     "action": "core:toggle-fullscreen"
   },
   {
+    "combination": "f11",
+    "action": "core:toggle-fullscreen"
+  },
+  {
     "combination": "alt+shift+j",
     "action": "root:split-left"
   },
