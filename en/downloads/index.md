@@ -4,4 +4,4 @@ title: "Downloads"
 
 [Lite XL Latest Release][1]
 
-[1]: https://github.com/lite-xl/lite-xl/releases/latest
+[1]: https://github.com/franko/lite-xl/releases/latest
