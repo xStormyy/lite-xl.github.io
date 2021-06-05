@@ -35,6 +35,19 @@ navigation:
     icon_type: "keyboard"
     icon_category: "fas"
 
+- label: "Plugins"
+  type: "dropdown"
+  pages:
+  - label: "Repository"
+    url: "/en/plugins"
+    icon_type: "github"
+    icon_category: "fab"
+
+  - label: "Externals"
+    url: "/en/plugins-external"
+    icon_type: "link"
+    icon_category: "fas"
+
 - label: "Downloads"
   url: "/en/downloads/"
   icon_type: "download"

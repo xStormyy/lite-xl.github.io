@@ -1,0 +1,29 @@
+<table
+	id="table-plugins"
+	class="table table-sm table-hover"
+	data-toggle="table">
+	<thead>
+		<tr>
+			<th
+				data-field="name"
+				data-sortable="true"
+			>
+				<span data-localize="plugin_name">Name</span>
+			</th>
+			<th>
+				<span data-localize="plugin_description">Description</span>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+{%-for plugin in site.data.plugins-%}
+		<tr>
+			{%-assign plugin_url = site.repository.plugins.url
+				| append: "/blob/master/plugins/" | append: plugin.name
+				| append: ".lua?raw=1"-%}
+			<td><a target="_blank" href="{{ plugin_url }}">{{ plugin.name }}</a></td>
+			<td>{{ plugin.description }}</td>
+		</tr>
+{%-endfor-%}
+	</tbody>
+</table>
