@@ -8,7 +8,7 @@ When downloading the source code using Git, it is important to download also
 the required submodules:
 
 ```sh
-git clone --recursive https://github.com/franko/lite-xl.git
+git clone --recursive https://github.com/lite-xl/lite-xl.git
 ```
 
 If the `--recursive` or `--recurse-submodules` was not used, it is possible
