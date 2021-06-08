@@ -69,11 +69,13 @@
   },
   {
     "combination": "ctrl+tab",
-    "action": "root:switch-to-next-tab"
+    "action": "root:switch-to-next-tab",
+    "note": "ctrl+tab on macOS"
   },
   {
     "combination": "ctrl+shift+tab",
-    "action": "root:switch-to-previous-tab"
+    "action": "root:switch-to-previous-tab",
+    "note": "ctrl+shift+tab on macOS"
   },
   {
     "combination": "ctrl+pageup",
@@ -85,39 +87,48 @@
   },
   {
     "combination": "alt+1",
-    "action": "root:switch-to-tab-1"
+    "action": "root:switch-to-tab-1",
+    "note": "cmd+1 on macOS"
   },
   {
     "combination": "alt+2",
-    "action": "root:switch-to-tab-2"
+    "action": "root:switch-to-tab-2",
+    "note": "cmd+2 on macOS"
   },
   {
     "combination": "alt+3",
-    "action": "root:switch-to-tab-3"
+    "action": "root:switch-to-tab-3",
+    "note": "cmd+3 on macOS"
   },
   {
     "combination": "alt+4",
-    "action": "root:switch-to-tab-4"
+    "action": "root:switch-to-tab-4",
+    "note": "cmd+4 on macOS"
   },
   {
     "combination": "alt+5",
-    "action": "root:switch-to-tab-5"
+    "action": "root:switch-to-tab-5",
+    "note": "cmd+5 on macOS"
   },
   {
     "combination": "alt+6",
-    "action": "root:switch-to-tab-6"
+    "action": "root:switch-to-tab-6",
+    "note": "cmd+6 on macOS"
   },
   {
     "combination": "alt+7",
-    "action": "root:switch-to-tab-7"
+    "action": "root:switch-to-tab-7",
+    "note": "cmd+7 on macOS"
   },
   {
     "combination": "alt+8",
-    "action": "root:switch-to-tab-8"
+    "action": "root:switch-to-tab-8",
+    "note": "cmd+8 on macOS"
   },
   {
     "combination": "alt+9",
-    "action": "root:switch-to-tab-9"
+    "action": "root:switch-to-tab-9",
+    "note": "cmd+9 on macOS"
   },
   {
     "combination": "ctrl+f",
