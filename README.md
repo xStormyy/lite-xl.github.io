@@ -1,5 +1,7 @@
 # [Lite XL] website
 
+Work in progress
+-
 The website is built using [Jekyll]. [Node.js] is used to compile
 all static assets including the [Bootstrap] library and built on
 along with the [SASS] stylesheets. Most of the content on the website is
