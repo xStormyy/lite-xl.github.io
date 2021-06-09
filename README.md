@@ -11,6 +11,8 @@ Language translations are provided using [JQuery Localize].
 
 - Install `ruby` and `yarn`
 - Use the automatic setup via `site run`
+  *(in case of problems, refer to 
+  [issue #3](https://github.com/lite-xl/lite-xl.github.io/issues/3))*
 
 or manually:
 
