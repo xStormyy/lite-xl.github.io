@@ -19,7 +19,7 @@ if [ "$1" == "--help" ] || [ "$1" == "-h" ] || [ "$1" == "help" ]; then
 	exit 0
 fi
 
-if [ "$1" == "-i" ] || [ "$1" == "--install" ]; then
+if [ ! -d "node_modules" ] || [ "$1" == "-i" ] || [ "$1" == "--install" ]; then
 	gem update
 	gem install bundler
 	bundle install
