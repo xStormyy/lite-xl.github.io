@@ -48,7 +48,7 @@ spdx_license_id: "Apache-2.0"
 
 repository:
   plugins:
-    url: "https://github.com/franko/lite-plugins"
+    url: "https://github.com/lite-xl/lite-plugins"
 
 locale:
   default: "en"
