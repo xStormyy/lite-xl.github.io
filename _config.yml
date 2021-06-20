@@ -46,6 +46,10 @@ url: "https://lite-xl.github.io"
 description: "Lite XL IDE Website"
 spdx_license_id: "Apache-2.0"
 
+repository:
+  plugins:
+    url: "https://github.com/franko/lite-plugins"
+
 locale:
   default: "en"
 
