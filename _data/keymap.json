@@ -65,7 +65,8 @@
   },
   {
     "combination": "ctrl+w",
-    "action": "root:close"
+    "action": "root:close",
+    "note": "cmd+w on macOS"
   },
   {
     "combination": "ctrl+tab",
