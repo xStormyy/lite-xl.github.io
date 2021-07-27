@@ -78,7 +78,7 @@ To build Lite XL with Meson the commands below can be used:
 ```sh
 meson setup --buildtype=release --prefix <prefix> build
 meson compile -C build
-DESTDIR=lite-xl meson install --skip-subprojects -C build
+DESTDIR="$(pwd)/lite-xl" meson install --skip-subprojects -C build
 ```
 
 where `<prefix>` depends on the OS you are using:
