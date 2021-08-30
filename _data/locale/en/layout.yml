@@ -48,6 +48,12 @@ navigation:
     icon_type: "link"
     icon_category: "fas"
 
+- label: "Tutorials"
+  type: "dropdown"
+  pages:
+  - label: "Simple Plugin"
+    url: "/en/tutorials/simple-plugin"
+
 - label: "Downloads"
   url: "/en/downloads/"
   icon_type: "download"
