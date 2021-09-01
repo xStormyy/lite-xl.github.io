@@ -1,11 +1,11 @@
 ---
 title: "Simple Plugin"
 ---
-### A good starting place to learn how to develop plugins for LiteXL
+### A good starting place to learn how to develop plugins for Lite XL
 
 #### What is Simple?
 Simple is a very basic plugin written with the intention of introducing developers
-who are new to LiteXL to the process of writing plugins for the editor.
+who are new to Lite XL to the process of writing plugins for the editor.
 
 #### What does the plugin do?
 The plugin displays a message (that is taken as input from the user) at the top
@@ -22,14 +22,14 @@ of the code in the file does.
 
 -----------------------------------------------------------------------
 -- NAME       : Simple
--- DESCRIPTION: A simple guide on how to make your first LiteXL plugin
+-- DESCRIPTION: A simple guide on how to make your first Lite XL plugin
 -- AUTHOR     : Ashwin Godbole (aelobdog)
 -- GOALS      : To render some text inside the editor
 -----------------------------------------------------------------------
 -- Disclaimer :
 -- I am not a lua developer, and my knowledge about writing plugins for
--- LiteXL is very limited. This file serves the purpose of helping the
--- reader get started with plugin development for LiteXL, and therefore
+-- Lite XL is very limited. This file serves the purpose of helping the
+-- reader get started with plugin development for Lite XL, and therefore
 -- demonstrates only some very basic features. For more complex plugin
 -- development, be sure to check out the source code of some other
 -- plugins after going through this file.
