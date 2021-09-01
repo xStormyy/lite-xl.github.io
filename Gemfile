@@ -3,7 +3,7 @@ source "https://rubygems.org"
 if Gem::Platform.local.os == "darwin"
   gem "webrick"
 else
-  ruby "2.7.1"
+  ruby "~> 2.7.1"
 end
 
 # Uncomment to build our site in Travis-CI and force gh-pages compatibility
