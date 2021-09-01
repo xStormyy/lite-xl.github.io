@@ -2,6 +2,10 @@ navigation:
 - label: "About"
   type: "dropdown"
   pages:
+  - label: "FAQ"
+    url: "/en/faq"
+    icon_type: "question"
+    icon_category: "fas"
   - label: "Features"
     url: "/en/features/"
     icon_type: "info"
