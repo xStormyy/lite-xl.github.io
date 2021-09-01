@@ -6,22 +6,21 @@ title: "Usage"
 
 ## Overview
 
-Lite is a lightweight text editor written mostly in Lua — it aims to provide
+Lite XL is a lightweight text editor written mostly in Lua — it aims to provide
 something practical, pretty, *small* and fast, implemented as simply as
 possible; easy to modify and extend, or to use without doing either.
 
-Lite XL is based on the Lite editor itself and provide some enhancements
-while remaining generally compatible with Lite.
+Lite XL is based on the Lite editor and provide some enhancements
+while remaining generally compatible with it.
 
 ## Getting Started
 
-Lite works using a *project directory* — this is the directory where your
+Lite XL works using a *project directory* — this is the directory where your
 project's code and other data resides.
 
-To open lite with a specific project directory the directory name can be passed
+To open a specific project directory the directory name can be passed
 as a command-line argument *(`.` can be passed to use the current directory)* or
-the directory can be dragged onto either the lite executable or a running
-instance of lite.
+the directory can be dragged onto either the executable or a running instance.
 
 Once started the project directory can be changed using the command
 `core:change-project-folder`. The command will close all the documents
@@ -31,7 +30,7 @@ If you want to open a project directory in a new window the command
 `core:open-project-folder` will open a new editor window with the selected
 project directory.
 
-The main way of opening files in lite is through the `core:find-file` command
+The main way of opening files in Lite XL is through the `core:find-file` command
 — this provides a fuzzy finder over all of the project's files and can be
 opened using the **`ctrl+p`** shortcut by default.
 
@@ -42,21 +41,25 @@ document. The current keyboard shortcut for a command can be seen to the right
 of the command name on the command finder, thus to find the shortcut for a command
 `ctrl+shift+p` can be pressed and the command name typed.
 
+## User Data Directories
+
+Lite XL uses standard systems user directories; the user data can be found in
+`$HOME/.config/lite-xl` on Linux and macOS.
+On Windows, the variable `$USERPROFILE` will be used instead of
+`$HOME`.
+
 ## User Module
 
-lite can be configured through use of the user module. The user module can be
+Lite XL can be configured through use of the user module. The user module can be
 used for changing options in the config module, adding additional key bindings,
 loading custom color themes, modifying the style or changing any other part of
-lite to your personal preference.
+the editor to your personal preference.
 
-The user module is loaded by lite when the application starts, after the plugins
-have been loaded.
+The user module is loaded when the application starts,
+after the plugins have been loaded.
 
 The user module can be modified by running the `core:open-user-module` command
 or otherwise directly opening the `$HOME/.config/lite-xl/init.lua` file.
-
-On Windows, the variable `$USERPROFILE` will be used instead of
-`$HOME`.
 
 Please note that Lite XL differs from the standard Lite editor for the location
 of the user's module.
@@ -64,12 +67,12 @@ of the user's module.
 ## Project Module
 
 The project module is an optional module which is loaded from the current
-project's directory when lite is started. Project modules can be useful for
+project's directory when Lite XL is started. Project modules can be useful for
 things like adding custom commands for project-specific build systems, or
 loading project-specific plugins.
 
-The project module is loaded by lite when the application starts, after both the
-plugins and user module have been loaded.
+The project module is loaded when the application starts,
+after both the plugins and user module have been loaded.
 
 The project module can be edited by running the `core:open-project-module`
 command — if the module does not exist for the current project when the
@@ -98,8 +101,8 @@ tree-view to create a new empty subdirectory.
 
 ## Commands
 
-Commands in lite are used both through the command finder (`ctrl+shift+p`) and
-by lite's keyboard shortcut system. Commands consist of 3 components:
+Commands are used both through the command finder (`ctrl+shift+p`) and
+by Lite XL's keyboard shortcut system. Commands consist of 3 components:
 
 * **Name** — The command name in the form of `namespace:action-name`, for
   example: `doc:select-all`
@@ -134,9 +137,9 @@ command.perform "core:quit"
 
 ## Keymap
 
-All keyboard shortcuts in lite are handled by the `core.keymap` module. A key
-binding in lite maps a "stroke" (eg. `ctrl+q`) to one or more commands (eg.
-`core:quit`). When the shortcut is pressed lite will iterate each command
+All keyboard shortcuts are handled by the `core.keymap` module.
+A key binding maps a "stroke" (eg. `ctrl+q`) to one or more commands
+(eg. `core:quit`). When the shortcut is pressed Lite XL will iterate each command
 assigned to that key and run the *predicate function* for that command — if the
 predicate passes it stops iterating and runs the command.
 
@@ -158,11 +161,11 @@ local keymap = require "core.keymap"
 keymap.add { ["ctrl+q"] = "core:quit" }
 ```
 
-A list of default mappings can be viewed [here].
+A list of default mappings can be viewed [here][1].
 
 ## Plugins
 
-Plugins in lite are normal lua modules and are treated as such — no
+Plugins in Lite XL are normal lua modules and are treated as such — no
 complicated plugin manager is provided, and, once a plugin is loaded, it is never
 expected be to have to unload itself.
 
@@ -171,27 +174,27 @@ module directory.
 When Lite XL starts it will first load the plugins included in the data directory
 and will then loads the plugins located in the user module directory.
 
-To uninstall a plugin the
-plugin file can be deleted — any plugin (including those included with lite's
-default installation) can be deleted to remove its functionality.
+To uninstall a plugin the plugin file can be deleted — any plugin
+(including those included with the default installation)
+can be deleted to remove its functionality.
 
 If you want to load a plugin only under a certain circumstance (for example,
 only on a given project) the plugin can be placed somewhere other than the
 `plugins` directory so that it is not automatically loaded. The plugin can
 then be loaded manually as needed by using the `require` function.
 
-Plugins can be downloaded from the [plugins repository].
+Plugins can be downloaded from the [plugins repository][2].
 
 ## Restarting the editor
 
-If you modifies the user configuration file or some of the Lua implementation files you may
-restart the editor using the command `core:restart`.
+If you modifies the user configuration file or some of the Lua implementation files
+you may restart the editor using the command `core:restart`.
 All the application will be restarting by keeping the window that is already in use.
 
 ## Color Themes
 
-Colors themes in lite are lua modules which overwrite the color fields of lite's
-`core.style` module.
+Colors themes in Lite XL are lua modules which overwrite the color fields of
+Lite XL's `core.style` module.
 Pre-defined color methods are located in the `colors` folder in the data directory.
 Additional color themes can be installed in the user's directory in a folder named
 `colors`.
@@ -206,10 +209,10 @@ In the Lite editor the function `require` is used instead of `core.reload_module
 In Lite XL `core.reload_module` should be used to ensure that the color module
 is actually reloaded when saving the user's configuration file.
 
-Color themes can be downloaded from the [color themes repository].
+Color themes can be downloaded from the [color themes repository][3].
 They are included with Lite XL release packages.
 
-[screenshot]:              {{ 'assets/img/screenshots/editor2.png' | relative_url }}
-[here]:                    keymap
-[plugins repository]:      https://github.com/rxi/lite-plugins
-[color themes repository]: https://github.com/rxi/lite-colors
+[screenshot]: {{ 'assets/img/screenshots/editor2.png' | relative_url }}
+[1]: keymap
+[2]: https://github.com/rxi/lite-plugins
+[3]: https://github.com/rxi/lite-colors
