@@ -3,21 +3,22 @@ navigation:
   type: "dropdown"
   pages:
   - label: "FAQ"
-    url: "/en/faq"
+    url: "/en/about/faq"
     icon_type: "question"
     icon_category: "fas"
+
   - label: "Features"
-    url: "/en/features/"
+    url: "/en/about/features/"
     icon_type: "info"
     icon_category: "fas"
 
   - label: "Screenshots"
-    url: "/en/screenshots/"
+    url: "/en/about/screenshots/"
     icon_type: "image"
     icon_category: "fas"
 
   - label: "Contributors"
-    url: "/en/contributors"
+    url: "/en/about/contributors"
     icon_type: "users"
     icon_category: "fas"
 
@@ -25,17 +26,17 @@ navigation:
   type: "dropdown"
   pages:
   - label: "Usage"
-    url: "/en/usage"
+    url: "/en/documentation/usage"
     icon_type: "book"
     icon_category: "fas"
 
   - label: "Build"
-    url: "/en/build/"
+    url: "/en/documentation/build/"
     icon_type: "code"
     icon_category: "fas"
 
   - label: "Keymap"
-    url: "/en/keymap"
+    url: "/en/documentation/keymap"
     icon_type: "keyboard"
     icon_category: "fas"
 
@@ -43,12 +44,12 @@ navigation:
   type: "dropdown"
   pages:
   - label: "Repository"
-    url: "/en/plugins"
+    url: "/en/plugins/repository"
     icon_type: "github"
     icon_category: "fab"
 
   - label: "Externals"
-    url: "/en/plugins-external"
+    url: "/en/plugins/external"
     icon_type: "link"
     icon_category: "fas"
 
@@ -59,7 +60,7 @@ navigation:
     url: "/en/tutorials/simple-plugin"
 
 - label: "Downloads"
-  url: "/en/downloads/"
+  url: "/en/downloads"
   icon_type: "download"
   icon_category: "fas"
 

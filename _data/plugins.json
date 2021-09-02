@@ -212,7 +212,7 @@
     "description": "Syntax for the <a href='https://www.ruby-lang.org/'>Ruby</a> programming language."
   },
   {
-    "name": "language sass",
+    "name": "language_sass",
     "description": "Syntax for the <a href='https://sass-lang.com/'>Sass</a> CSS preprocessor."
   },
   {

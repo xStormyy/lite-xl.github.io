@@ -125,6 +125,6 @@ pip3 install meson
 `${MINGW_PACKAGE_PREFIX}` expands either to `mingw-w64-i686` or `mingw-w64-x86_64`
 depending if the current shell is 32 or 64 bit.
 
-[1]: /en/build#source-code
+[1]: {{ 'en/documentation/build#source-code' | relative_url }}
 [2]: https://github.com/lite-xl/lite-xl/releases/latest/
 [3]: https://www.msys2.org/

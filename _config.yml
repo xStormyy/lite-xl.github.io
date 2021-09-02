@@ -43,7 +43,8 @@ plugins:
 
 name: "Lite XL"
 url: "https://lite-xl.github.io"
-description: "Lite XL IDE Website"
+permalink: pretty
+description: "Lite XL Website"
 spdx_license_id: "Apache-2.0"
 
 repository:
