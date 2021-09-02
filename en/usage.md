@@ -1,9 +1,6 @@
 ---
 title: "Usage"
 ---
-
-![Screenshot]
-
 ## Overview
 
 Lite XL is a lightweight text editor written mostly in Lua — it aims to provide
@@ -222,7 +219,6 @@ is actually reloaded when saving the user's configuration file.
 Color themes can be downloaded from the [color themes repository][3].
 They are included with Lite XL release packages.
 
-[Screenshot]: {{ 'assets/img/screenshots/editor2.png' | relative_url }}
 [1]: keymap
 [2]: https://github.com/rxi/lite-plugins
 [3]: https://github.com/rxi/lite-colors
