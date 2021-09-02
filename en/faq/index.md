@@ -82,4 +82,4 @@ You can get more info in the [Features page][2].
 [lite-xl-discord]:    https://github.com/vincens2005/lite-xl-discord
 
 [1]: https://github.com/lite-xl/lite-plugins
-[2]: {% link en/features/index.md %}
+[2]: {{ 'en/features' | relative_url }}
