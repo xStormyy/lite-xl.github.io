@@ -57,3 +57,8 @@ locale:
 authors:
   content: "redtide"
   web: "redtide"
+
+kbd:
+  use_modifier_symbols: false
+  use_key_symbols: false
+  use_plus_sign: false

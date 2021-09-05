@@ -1,8 +1,11 @@
 ---
 title: "Default keymap"
 ---
-*Note: When using **macOS**, unless otherwise noted,
-`ctrl` refers to the `cmd` (command) key
-and `alt` refers to `cmd+ctrl`.*
+
+##### Note:
+- {% kbd option %} is also known as `Alt`.
+- When using **macOS**, unless otherwise noted,
+{% kbd ctrl %} refers to {% kbd cmd %} key
+and {% kbd option %} refers to {% kbd ctrl+cmd %}.
 
 {%- include project/keymap.liquid -%}
