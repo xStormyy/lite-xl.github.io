@@ -60,5 +60,5 @@ authors:
 
 kbd:
   use_modifier_symbols: false
-  use_key_symbols: false
+  use_key_symbols: true
   use_plus_sign: false
