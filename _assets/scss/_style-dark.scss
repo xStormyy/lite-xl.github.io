@@ -1,0 +1,19 @@
+$body-bg:      #222222;
+$body-color:   #999999;
+$link-color:   #cccccc;
+$text-primary: $navbar-dark-color;
+$card-bg:      $body-bg;
+
+.navbar-nav > li > .dropdown-menu
+{
+  background-color: $header-color;
+  a
+  {
+    background-color: $header-color;
+    color: $navbar-dark-color;
+  }
+}
+.card-body > ul > li > a:hover
+{
+  text-decoration: none;
+}

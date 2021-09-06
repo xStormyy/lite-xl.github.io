@@ -1,10 +1,5 @@
-/**
- * Syntax highlighting styles
- */
+@import "syntax-highlighting-base";
 
- @import
-    "syntax-highlighting-base"
-;
 .language-c--, .language-cpp,
 pre.highlight {
     .bp    { color: #999 }                              // Name.Builtin.Pseudo
