@@ -261,6 +261,7 @@ module Jekyll
       use_key_symbol = config['kbd']['use_key_symbols'] rescue true
       use_mod_symbol = config['kbd']['use_modifier_symbols'] rescue true
       use_plus = config['kbd']['use_plus_sign'] rescue true
+      combo_joiner = config['kbd'].fetch('combo_joiner', '/') rescue '/'
 
       if @target
         @combos = create_combos(context[@target])
@@ -295,7 +296,7 @@ module Jekyll
         output.push(kbd)
       end
 
-      output.join(' / ')
+      output.join(combo_joiner)
     end
 
     Liquid::Template.register_tag('kbd', self)
