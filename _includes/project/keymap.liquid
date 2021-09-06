@@ -21,9 +21,16 @@
 	</thead>
 	<tbody>
 {%-for key in site.data.keymap-%}
-		<tr>
-			<td>{{ key.combination }}</td>
-			<td>{{ key.action }}</td>
+    <tr>
+			<td>{% kbd !key.combination %}</td>
+			<td>
+				{% assign words = key.action | split: ":" | last | split: '-' %}
+				{% capture action %}
+					{% for word in words %}{{ word | capitalize }} {% endfor %}
+				{% endcapture %}
+				{% assign category = key.action | split: ":" | first | capitalize %}
+				<code title="{{ category }}: {{ action | strip }}">{{ key.action }}</code>
+			</td>
 			<td>{{ key.note }}</td>
 		</tr>
 {%-endfor-%}
