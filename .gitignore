@@ -4,6 +4,7 @@
 /.vendor
 /assets/css/*.map
 /assets/css/style.css
+/assets/css/style.min.css
 /assets/js/*.map
 /node_modules
 /vendor/*
