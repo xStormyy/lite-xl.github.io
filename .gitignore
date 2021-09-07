@@ -8,8 +8,6 @@
 /node_modules
 /vendor/*
 Gemfile.lock
-package-lock.json
-yarn.lock
 *.code-workspace
 *.diff
 *.log
