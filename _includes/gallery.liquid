@@ -1,0 +1,10 @@
+<div markdown=0 class="d-flex justify-content-center">
+{%-for image in site.static_files-%}
+	{%-if image.path contains 'assets/img/screenshots'-%}
+			{%-assign image_path=site.baseurl | append: image.path-%}
+<a href="{{ image_path }}" data-toggle="lightbox" data-gallery="gallery">
+	<img src="{{ image_path }}" class="img-fluid" style="width:320px">
+</a>
+	{%-endif-%}
+{%-endfor-%}
+</div>

@@ -2,4 +2,4 @@
 title: "Screenshots"
 ---
 
-WIP
+{% include gallery.liquid %}
