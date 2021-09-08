@@ -42,6 +42,10 @@ You can search for commands in the command palette.\
 For each command, replace the spaces in the right side with dashes.\
 For example: `Core: Find Command` → `core:find-command`
 
+#### What version of Lua does Lite XL use?
+
+Lua 5.2.4. There's some activity around using LuaJIT instead (which is 5.1) but it can provide some Lua 5.2 compatibility.
+
 #### Vim mode?
 
 You need to [vibe].
