@@ -2,7 +2,8 @@ $body-bg:      #222222;
 $body-color:   #999999;
 $link-color:   #cccccc;
 $text-primary: $navbar-dark-color;
-$card-bg:      $body-bg;
+
+/* Navbar */
 
 .navbar-nav > li > .dropdown-menu
 {
@@ -13,7 +14,16 @@ $card-bg:      $body-bg;
     color: $navbar-dark-color;
   }
 }
+/* Cards */
+
+$card-bg:      $body-bg;
 .card-body > ul > li > a:hover
 {
   text-decoration: none;
 }
+/* Kbd plugin */
+
+$kbd-text-color: #bbb;
+$kbd-combo-border-color: #555;
+$kbd-border-color: #444;
+$kbd-combo-bg-color: #111;

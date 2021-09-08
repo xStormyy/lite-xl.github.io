@@ -6,11 +6,12 @@ $text-primary: $header-color;
 $navbar-dark-color:       rgba(#fff, .75);
 $navbar-dark-hover-color: white;
 
-@import "style-dark";
+@import "style-dark-before";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "variables";
 @import "syntax-highlighting-dark";
 @import "keyboard-shortcuts";
+@import "style-dark-after";
 
 .header-dark
 {
@@ -125,9 +126,4 @@ img
     {
         color: $include_path_color;
     }
-}
-// FIXME: part of dark style
-a:hover
-{
-  color: $navbar-dark-hover-color;
 }
