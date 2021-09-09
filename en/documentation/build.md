@@ -26,12 +26,12 @@ If you compile Lite XL yourself,
 it is recommended to use the script `build-packages.sh`:
 
 ```sh
-bash build-packages.sh <arch>
+bash build-packages.sh -h
 ```
 
-The script will run Meson and create a zip file with the application or,
-for linux, a tar compressed archive.
-Lite XL can be easily installed by unpacking the archive in any directory of your choice.
+The script will run Meson and create a tar compressed archive with the application or,
+for Windows, a zip file. Lite XL can be easily installed
+by unpacking the archive in any directory of your choice.
 
 On Windows two packages will be created, one called "portable" using the "data"
 folder next to the executable and the other one using a unix-like file layout.
