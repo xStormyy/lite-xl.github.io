@@ -58,6 +58,8 @@ navigation:
   pages:
   - label: "Simple Plugin"
     url: "/en/tutorials/simple-plugin"
+  - label: "API Overview"
+    url: "/en/tutorials/api-overview"
 
 - label: "Downloads"
   url: "/en/downloads"
