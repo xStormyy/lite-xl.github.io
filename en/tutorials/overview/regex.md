@@ -27,6 +27,9 @@ Arguments:
     - `regex.NOTEOL`: String is not the end of line
     - `regex.NOTEMPTY`: Do not match an empty string
     - `regex.NOTEMPTY_ATSTART`: Do not match empty string at the start
+    
+**Note: `regex:cmatch()` returns wrong indexes (currently at version 2.0.2).
+  The end index returned by `regex:cmatch()` is always off by 1 (-1 to get the actual end index).**
 
 ##### High level functions
 All the functions below can be in 2 forms:
