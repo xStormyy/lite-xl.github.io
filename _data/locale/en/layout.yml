@@ -60,6 +60,8 @@ navigation:
     url: "/en/tutorials/simple-plugin"
   - label: "API Overview"
     url: "/en/tutorials/api-overview"
+  - label: "System Fonts"
+    url: "/en/tutorials/system-fonts"
 
 - label: "Downloads"
   url: "/en/downloads"
