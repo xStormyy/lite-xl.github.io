@@ -30,10 +30,17 @@ Lite XL can also be installed on macOS via [MacPorts][4]:
 sudo port install lite-xl
 ```
 
+The [LuaJIT-based version][5] of Lite XL is also available:
+
+```
+sudo port install lite-xl-luajit
+```
+
 [1]: https://repology.org/project/lite-xl/versions
 [2]: https://github.com/lite-xl/lite-xl/
 [3]: https://github.com/lite-xl/lite-xl/releases/latest
 [4]: https://ports.macports.org/port/lite-xl/
+[5]: https://ports.macports.org/port/lite-xl-luajit/
 
 [Archlinux]: https://aur.archlinux.org/packages/lite-xl/
 
