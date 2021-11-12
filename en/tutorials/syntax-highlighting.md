@@ -4,7 +4,7 @@ title: "Syntax Highlighting"
 
 ### How to create syntax highlighting plugins for Lite XL
 
-Syntax highlighting plugins for lite-xl are lua files, that define some regular expressions that
+Syntax highlighting plugins for Lite XL are lua files, that define some regular expressions that
 match different parts of a given language, assigning different token types to each match.
 These different token types are then given different colors by your chosen color scheme.
 
@@ -90,7 +90,7 @@ Let's take each section in turn and see how it works.
 
 #### Header
 
-The first line is a Lua comment & tells lite-xl which version this plugin requires. The second imports the `core.syntax` module
+The first line is a Lua comment & tells Lite XL which version this plugin requires. The second imports the `core.syntax` module
 for us to use:
 
 ```lua
@@ -102,7 +102,7 @@ We then add a syntax definition to lite, using `syntax.add {...}`. The contents 
 
 #### Files
 
-The `files` property tells lite-xl which files this syntax should be used for. This is a Lua pattern that matches against the full path of the file being opened. For example, to match against Markdown files - with either a `.md` or a `.markdown` extension,
+The `files` property tells Lite XL which files this syntax should be used for. This is a Lua pattern that matches against the full path of the file being opened. For example, to match against Markdown files - with either a `.md` or a `.markdown` extension,
 you could do this:
 
 ```lua
@@ -123,7 +123,7 @@ files = { "sshd?/?_?config$" },
 
 #### Comment
 
-The comment property _doesn't_ define which parts of the syntax are comments - see Patterns for that, below. This property tells lite-xl which character to insert at the start of selected lines when you press `ctrl+/`.
+The comment property _doesn't_ define which parts of the syntax are comments - see Patterns for that, below. This property tells Lite XL which character to insert at the start of selected lines when you press `ctrl+/`.
 
 #### Patterns
 
