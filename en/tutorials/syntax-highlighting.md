@@ -60,10 +60,10 @@ syntax.add {
   files = { "sshd?/?_?config$" },
   comment = '#',
   patterns = {
-    { pattern = "#.*\n",        type = "comment" },
-    { pattern = "%d+",          type = "number"  },
-    { pattern = "[%a_][%w_]*",  type = "symbol"  },
-    { pattern = "@",            type = "literal" },
+    { pattern = "#.*\n",        type = "comment"  },
+    { pattern = "%d+",          type = "number"   },
+    { pattern = "[%a_][%w_]*",  type = "symbol"   },
+    { pattern = "@",            type = "operator" },
   },
   symbols = {
     -- ssh config
