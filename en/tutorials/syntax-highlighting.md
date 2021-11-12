@@ -23,30 +23,24 @@ The user module folder for Lite XL can generally be found in these places on dif
 
 So, to create a new syntax definition on Linux, you can just create a `.lua` file in your `$HOME/.config/lite-xl/plugins/` folder.
 
-#### What syntax token types are there?
+#### What syntax token types are supported?
 
-These are defined by your color scheme. The ones defined by `lite-xl/core/style.lua` are:
+The supported syntax token types, defined by `lite-xl/core/style.lua`, are:
 
-```lua
-style.syntax["normal"] = { common.color "#e1e1e6" }
-style.syntax["symbol"] = { common.color "#e1e1e6" }
-style.syntax["comment"] = { common.color "#676b6f" }
-style.syntax["keyword"] = { common.color "#E58AC9" }
-style.syntax["keyword2"] = { common.color "#F77483" }
-style.syntax["number"] = { common.color "#FFA94D" }
-style.syntax["literal"] = { common.color "#FFA94D" }
-style.syntax["string"] = { common.color "#f7c95c" }
-style.syntax["operator"] = { common.color "#93DDFA" }
-style.syntax["function"] = { common.color "#93DDFA" }
-```
+- normal
+- symbol
+- comment
+- keyword
+- keyword2
+- number
+- literal
+- string
+- operator
+- function
 
-This is, honestly, not a lot of token types.
+In your syntax highlighting plugin, you write patterns to match parts of the language syntax, assigning these token types to matches. You don't have to use them all - just use as many as you need for your language.
 
-You can define _any token type you like_ in your syntax definition - but to have any effect, the token
-type will need to be supported by the color scheme. If the color scheme _doesn't_ assign a color to a token type,
-then it won't be highlighted.
-
-Let's walk through an example syntax definition and see how it works.
+Let's walk through an example syntax definition and see how this works.
 
 ### Example syntax: ssh config files
 
