@@ -2,22 +2,30 @@
 title: "Syntax Highlighting"
 ---
 
-### How to create syntax highlighting plugins for lite-xl XL
+### How to create syntax highlighting plugins for Lite XL
 
 Syntax highlighting plugins for lite-xl are lua files, that define some regular expressions that
 match different parts of a given language, assigning different token types to each match.
 These different token types are then given different colors by your chosen color scheme.
 
-Like other plugins, syntax definitions are sources from the following folders, in order:
+Like other plugins, syntax definitions are sourced from the following folders, in order:
 
 - /usr/share/lite-xl/plugins/
-- ~/.config/lite-xl/plugins/
+- $HOME/.config/lite-xl/plugins/
 
-So, to create a new syntax definition, you can just create a file in your `~/.config/lite-xl/plugins/` folder.
+NOTE: The exact location of these folders will depend on your OS and installation method. For example, on Windows, the variable `$USERPROFILE` will be used instead of `$HOME`.
+
+The user module folder for Lite XL can generally be found in these places on different OSes:
+
+- Windows: C:\Users\(username)\.config\lite-xl\
+- MacOS: /Users/(usernmame)/.config/lite-xl/
+- Linux: /home/(username)/.config/lite-xl/
+
+So, to create a new syntax definition on Linux, you can just create a `.lua` file in your `$HOME/.config/lite-xl/plugins/` folder.
 
 #### What syntax token types are there?
 
-These are defined by your color scheme, but the ones defined by `lite-xl/core/style.lua` are:
+These are defined by your color scheme. The ones defined by `lite-xl/core/style.lua` are:
 
 ```lua
 style.syntax["normal"] = { common.color "#e1e1e6" }
@@ -32,9 +40,9 @@ style.syntax["operator"] = { common.color "#93DDFA" }
 style.syntax["function"] = { common.color "#93DDFA" }
 ```
 
-This is, honestly not a lot of token types.
+This is, honestly, not a lot of token types.
 
-You _could_ define _any token type you like_ in your syntax definition - but to have an effect, the token
+You can define _any token type you like_ in your syntax definition - but to have any effect, the token
 type will need to be supported by the color scheme. If the color scheme _doesn't_ assign a color to a token type,
 then it won't be highlighted.
 
@@ -45,7 +53,7 @@ Let's walk through an example syntax definition and see how it works.
 This is a small, simple example of a syntax definition. It's intended to highlight SSH Config files and looks like this:
 
 ```lua
--- mod-version:2
+-- mod-version:2 -- lite-xl 2.0
 local syntax = require "core.syntax"
 
 syntax.add {
@@ -86,7 +94,7 @@ The first line is a Lua comment & tells lite-xl which version this plugin requir
 for us to use:
 
 ```lua
--- mod-version:2
+-- mod-version:2 -- lite-xl 2.0
 local syntax = require "core.syntax"
 ```
 
@@ -94,20 +102,20 @@ We then add a syntax definition to lite, using `syntax.add {...}`. The contents 
 
 #### Files
 
-The `files` property tells lite-xl which files this syntax should be used for. This is a regular expression that matches against the full path of the file being opened. For example, to match against Markdown files - with either a `.md` or a `.markdown` extension,
-you would do this:
+The `files` property tells lite-xl which files this syntax should be used for. This is a Lua pattern that matches against the full path of the file being opened. For example, to match against Markdown files - with either a `.md` or a `.markdown` extension,
+you could do this:
 
 ```lua
 files = { "%.md$", "%.markdown$" },
 ```
 
-In our example, we match against the end of the path rather than the extension, because SSH config files don't have extensions - and we don't want to match all `config` files. We expect the path for SSH config files to look something like one of these:
+In our original example, we match against the end of the path rather than the extension, because SSH config files don't have extensions - and we don't want to match all `config` files. We expect the path for SSH config files to look something like one of these:
 
 - `~/.ssh/config`
 - `/etc/ssh/ssh_config`
 - `/etc/ssh/sshd_config`
 
-This regex matches paths that look like that:
+This pattern matches paths that look like that:
 
 ```lua
 files = { "sshd?/?_?config$" },
@@ -115,34 +123,32 @@ files = { "sshd?/?_?config$" },
 
 #### Comment
 
-The comment property doesn't define which parts of the syntax are comments - see Patterns for that, below. This property tells lite-xl which character to insert at the start of the line when you press `ctrl+/`.
+The comment property _doesn't_ define which parts of the syntax are comments - see Patterns for that, below. This property tells lite-xl which character to insert at the start of selected lines when you press `ctrl+/`.
 
 #### Patterns
-
-Next up is the patterns section.
 
 Each matching pattern captures the text that it matches - so a given run of text can only match one pattern.
 Patterns are tested in the order that they are written in the syntax definition, so the first match will win.
 
 Each pattern takes one of the following forms:
 
-##### Simple Regex
+##### Simple Pattern
 
 ```lua
 { pattern = "#.*\n",        type = "comment" },
 ```
 
-This form matches the line against the `pattern` regex and if it matches, assigns the matching text to the given token `type`.
+This form matches the line against the pattern and if it matches, assigns the matching text to the given token `type` - `comment`, in this case.
 
-##### Start & End Regex
+##### Start & End Pattern
 
 ```lua
 { pattern = { "%[", "%]" }, type = "keyword" },
 ```
 
-This form has two regexes - one that matches against the start of the range and one that matches against the end. Everything between the start and the end will be assigned the given token `type`.
+This form has two patterns - one that matches against the start of the range and one that matches against the end. Everything between the start and the end will be assigned the given token `type`.
 
-##### Start & End Regex with Escape
+##### Start & End Pattern, with Escape
 
 ```lua
 { pattern = { '"', '"', '\\' }, type = "string" },
@@ -151,7 +157,9 @@ This form has two regexes - one that matches against the start of the range and 
 This is the same as the previous form, but with an extra, third parameter.
 The 3rd part, the `'\\'` part in this example, specifies the character that allows escaping the closing match.
 
-For more on patterns & Lua Regular Expression syntax, see: [Lua Pattern Reference](https://www.lua.org/manual/5.3/manual.html#6.4.1)
+For more on Lua Patterns, see: [Lua Pattern Reference](https://www.lua.org/manual/5.3/manual.html#6.4.1)
+
+If you need to use PCRE Regular Expressions, instead of Lua Patterns, you can use the `regex` keyword here, instead of `pattern`.
 
 #### Symbols
 
