@@ -170,3 +170,13 @@ For example this highlights `Host` using the `function` token type, `HostName` a
 ["any"]      = "literal",
 ["ask"]      = "literal",
 ```
+
+### Testing Your New Syntax
+
+To test your new syntax highlighting you need to do two things:
+
+- Reload the Lite XL core
+- Load a file in your chosen language and see how it looks
+
+To reload the core, you can either restart Lite XL, or reload the core from the command palette, without needing to restart.
+To do this, type `ctrl+shit+p` to show the command palette, then select `Core: Restart` (or type `crr` or something similar to match it), then press Enter. You will need to restart the core after any changes you make to the syntax highlighting definition.
