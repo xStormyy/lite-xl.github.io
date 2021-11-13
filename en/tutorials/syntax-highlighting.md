@@ -4,8 +4,8 @@ title: "Syntax Highlighting"
 
 ### How to create syntax highlighting plugins for Lite XL
 
-Syntax highlighting plugins for Lite XL are lua files, that define some regular expressions that
-match different parts of a given language, assigning different token types to each match.
+Syntax highlighting plugins for Lite XL are Lua files. These define some patterns or regular expressions that
+match different parts of a given language, assigning token types to each match.
 These different token types are then given different colors by your chosen color scheme.
 
 Like other plugins, syntax definitions are sourced from the following folders, in order:
@@ -159,7 +159,7 @@ If you need to use PCRE Regular Expressions, instead of Lua Patterns, you can us
 
 The symbols section allows you to assign token types to particular keywords or strings - usually reserved words in the language you are highlighting.
 
-For example this highlights `Host` using the `function` token type, `HostName` as a `keyword` and `yes`, `no`, `any` & `ask` as a `literal`.
+For example this highlights `Host` using the `function` token type, `HostName` as a `keyword` and `yes`, `no`, `any` & `ask` as a `literal`:
 
 ```lua
 ["Host"]                         = "function",
