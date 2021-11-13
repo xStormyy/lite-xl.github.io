@@ -58,6 +58,8 @@ navigation:
   pages:
   - label: "Simple Plugin"
     url: "/en/tutorials/simple-plugin"
+  - label: "Syntax Highlighting"
+    url: "/en/tutorials/syntax-highlighting"
   - label: "API Overview"
     url: "/en/tutorials/api-overview"
   - label: "System Fonts"
