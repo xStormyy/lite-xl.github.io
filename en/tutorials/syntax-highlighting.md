@@ -121,7 +121,7 @@ The comment property _doesn't_ define which parts of the syntax are comments - s
 
 #### Patterns
 
-Each matching pattern captures the text that it matches - so a given run of text can only match one pattern.
+A given piece of text can only match one pattern. Once Lite XL decides that a piece of text matches a pattern, it will assign that token type to that piece and move on.
 Patterns are tested in the order that they are written in the syntax definition, so the first match will win.
 
 Each pattern takes one of the following forms:
