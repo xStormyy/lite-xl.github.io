@@ -1,8 +1,6 @@
----
-title: "Syntax Highlighting"
----
+# Syntax Highlighting
 
-### How to create syntax highlighting plugins for Lite XL
+## How to create syntax highlighting plugins for Lite XL
 
 Syntax highlighting plugins for Lite XL are Lua files. These define some patterns or regular expressions that
 match different parts of a given language, assigning token types to each match.
@@ -23,7 +21,7 @@ The user module folder for Lite XL can generally be found in these places on dif
 
 So, to create a new syntax definition on Linux, you can just create a `.lua` file in your `$HOME/.config/lite-xl/plugins/` folder.
 
-#### What syntax token types are supported?
+## What syntax token types are supported?
 
 The supported syntax token types, defined by `lite-xl/core/style.lua`, are:
 
@@ -42,7 +40,7 @@ In your syntax highlighting plugin, you write patterns to match parts of the lan
 
 Let's walk through an example syntax definition and see how this works.
 
-### Example syntax: ssh config files
+## Example syntax: ssh config files
 
 This is a small, simple example of a syntax definition. It's intended to highlight SSH Config files and looks like this:
 
@@ -82,7 +80,7 @@ syntax.add {
 
 Let's take each section in turn and see how it works.
 
-#### Header
+### Header
 
 The first line is a Lua comment & tells Lite XL which version this plugin requires. The second imports the `core.syntax` module
 for us to use:
@@ -115,18 +113,18 @@ This pattern matches paths that look like that:
 files = { "sshd?/?_?config$" },
 ```
 
-#### Comment
+### Comment
 
 The comment property _doesn't_ define which parts of the syntax are comments - see Patterns for that, below. This property tells Lite XL which character to insert at the start of selected lines when you press `ctrl+/`.
 
-#### Patterns
+### Patterns
 
 A given piece of text can only match one pattern. Once Lite XL decides that a piece of text matches a pattern, it will assign that token type to that piece and move on.
 Patterns are tested in the order that they are written in the syntax definition, so the first match will win.
 
 Each pattern takes one of the following forms:
 
-##### Simple Pattern
+#### Simple Pattern
 
 ```lua
 { pattern = "#.*\n",        type = "comment" },
@@ -134,7 +132,7 @@ Each pattern takes one of the following forms:
 
 This form matches the line against the pattern and if it matches, assigns the matching text to the given token `type` - `comment`, in this case.
 
-##### Start & End Pattern
+#### Start & End Pattern
 
 ```lua
 { pattern = { "%[", "%]" }, type = "keyword" },
@@ -142,7 +140,7 @@ This form matches the line against the pattern and if it matches, assigns the ma
 
 This form has two patterns - one that matches against the start of the range and one that matches against the end. Everything between the start and the end will be assigned the given token `type`.
 
-##### Start & End Pattern, with Escape
+#### Start & End Pattern, with Escape
 
 ```lua
 { pattern = { '"', '"', '\\' }, type = "string" },
@@ -155,7 +153,7 @@ For more on Lua Patterns, see: [Lua Pattern Reference](https://www.lua.org/manua
 
 If you need to use PCRE Regular Expressions, instead of Lua Patterns, you can use the `regex` keyword here, instead of `pattern`.
 
-#### Symbols
+### Symbols
 
 The symbols section allows you to assign token types to particular keywords or strings - usually reserved words in the language you are highlighting.
 
@@ -171,7 +169,7 @@ For example this highlights `Host` using the `function` token type, `HostName` a
 ["ask"]      = "literal",
 ```
 
-### Testing Your New Syntax
+## Testing Your New Syntax
 
 To test your new syntax highlighting you need to do two things:
 

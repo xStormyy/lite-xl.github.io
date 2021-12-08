@@ -1,24 +1,21 @@
----
-title: "Simple Plugin"
----
-### A good starting place to learn how to develop plugins for Lite XL
+# Simple Plugin
 
-#### What is Simple?
+### What is Simple?
 Simple is a very basic plugin written with the intention of introducing developers
 who are new to Lite XL to the process of writing plugins for the editor.
 
-#### What does the plugin do?
+### What does the plugin do?
 The plugin displays a message (that is taken as input from the user) at the top
 right corner of the editor window. It also allows the user to toggle
 the visibility of the message.
 
-#### Format of the tutorial
+### Format of the tutorial
 The code contains comments detailing what most (if not all)
 of the code in the file does.
 
-#### The code :
+### The code :
 ```lua
--- mod-version:1 -- lite-xl 1.16
+-- mod-version:2 -- lite-xl 2.0
 
 -----------------------------------------------------------------------
 -- NAME       : Simple

@@ -1,13 +1,8 @@
----
-title: "Downloads"
----
-
-[![Packaging status](https://repology.org/badge/vertical-allrepos/lite-xl.svg)][1]
-{: .img-align-right}
+# Downloads
 
 ## Source Code
 
-Source code is available on [GitHub][2], by downloading zip or tar archives,
+Source code is available on [GitHub](https://github.com/lite-xl/lite-xl/), by downloading zip or tar archives,
 or directly via git:
 
 ```sh
@@ -16,7 +11,7 @@ git clone https://github.com/lite-xl/lite-xl.git
 
 ## Manual Install
 
-Binary packages are available on the [GitHub releases page][3].
+Binary packages are available on the [GitHub releases page](https://github.com/lite-xl/lite-xl/releases/latest).
 
 ## Linux
 
@@ -24,23 +19,17 @@ Binary packages are available on the [GitHub releases page][3].
 
 ## MacPorts
 
-Lite XL can also be installed on macOS via [MacPorts][4]:
+Lite XL can also be installed on macOS via [MacPorts](https://ports.macports.org/port/lite-xl/):
 
 ```
 sudo port install lite-xl
 ```
 
-The [LuaJIT-based version][5] of Lite XL is also available:
+The [LuaJIT-based version](https://ports.macports.org/port/lite-xl-luajit/) of Lite XL is also available:
 
 ```
 sudo port install lite-xl-luajit
 ```
 
-[1]: https://repology.org/project/lite-xl/versions
-[2]: https://github.com/lite-xl/lite-xl/
-[3]: https://github.com/lite-xl/lite-xl/releases/latest
-[4]: https://ports.macports.org/port/lite-xl/
-[5]: https://ports.macports.org/port/lite-xl-luajit/
-
-[Archlinux]: https://aur.archlinux.org/packages/lite-xl/
+  [Archlinux]: https://aur.archlinux.org/packages/lite-xl/
 

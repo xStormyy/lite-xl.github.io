@@ -1,16 +1,14 @@
----
-title: System API
----
+# System API
 
 This is where Lite XL's lua code interact with its underlying C engine.
 Some of the functions here will be omitted because they're not useful for
 plugins.
 
-#### Clipboard
+## Clipboard
 - `system.set_clipboard(text)` sets the clipboard content.
 - `system.get_clipboard()` retrieves the content of the clipboard.
 
-#### File / Directory manipulation
+## File / Directory manipulation
 - `system.list_dir(dir)` returns a list of filenames in a directory.
 - `system.rmdir(dir)` removes a directory. Use this instead of `os.remove()`.
   This function can remove directories properly on Windows.
@@ -24,13 +22,13 @@ plugins.
   - `size`: file size in bytes.
   - `type`: Path type (`"file"` or `"dir"`).
 
-#### Timing
+## Timing
 - `system.get_time()` returns time in seconds (as floating point number) since Lite XL started.
   Use this instead of `os.time()` for higher precision timers.
 - `system.sleep(time)` sleeps for `time` in milliseconds.
   **Do not use this. Write asynchronous code.**
 
-#### Window manipulation
+## Window manipulation
 - `system.set_window_opacity(o)` sets the window opacity from 0 to 1.
 - `system.set_window_title(title)` sets the window title.
 - `system.set_window_mode(mode)` sets window mode:
@@ -54,7 +52,7 @@ plugins.
 - `system.show_fatal_error(title, msg)` shows an system error message box.
   **Use nagview whenever possible.**
 
-#### Misc
+## Misc
 - `system.exec(command)` runs a command. Use the [Process API][1] instead of this.
 - `system.fuzzy_match(haystack, needle, file)` generates a score depends on how close the needle
   matches the haystack.

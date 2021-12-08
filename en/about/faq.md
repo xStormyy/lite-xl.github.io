@@ -1,8 +1,4 @@
----
-title: "FAQ"
----
-
-Here are some frequently-asked questions.
+# FAQ
 
 #### Can I get smart autocompletion (intellisense/LSP)?
 
@@ -16,6 +12,7 @@ For now, we have the [console] plugin to run a command and dump its output. (not
 #### Tabs and indent size?
 
 In your user config (the cog icon in the file tree):
+
 ```lua
 config.tab_type = "soft" -- soft for spaces, hard for real tabs (\t)
 config.indent_size = 4   -- 4 spaces
@@ -38,8 +35,10 @@ keymap.add({ ["ctrl+escape"] = {} }, true)
 
 #### How to get commands for those keybinds?
 
-You can search for commands in the command palette.\
-For each command, replace the spaces in the right side with dashes.\
+You can search for commands in the command palette.
+
+For each command, replace the spaces in the right side with dashes.
+
 For example: `Core: Find Command` → `core:find-command`
 
 #### What version of Lua does Lite XL use?
@@ -69,7 +68,7 @@ these are a list of plugins that just makes Lite XL a lot more pleasant.
 
 #### Where's feature X? How about Y?
 
-You can get more info in the [Features page][2].
+You can get more info in the [Features page](/about/features).
 
 
 [LSP]:                https://github.com/jgmdev/lite-xl-lsp
@@ -86,4 +85,3 @@ You can get more info in the [Features page][2].
 [lite-xl-discord]:    https://github.com/vincens2005/lite-xl-discord
 
 [1]: https://github.com/lite-xl/lite-plugins
-[2]: {{ 'en/about/features' | relative_url }}

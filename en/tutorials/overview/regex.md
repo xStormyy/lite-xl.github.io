@@ -1,11 +1,9 @@
----
-title: Regex API
----
+# Regex API
 
 This API provides PCRE regular expressions for those who needs more power in matching text.
 This API written in C and Lua.
 
-#### Creating a regex
+## Creating a regex
 Use `regex.compile(pattern, options)` to compile a regex.
 
 Arguments:
@@ -15,8 +13,9 @@ Arguments:
   - `"m"`: Multiline search
   - `"s"`: Match all characters with dot (`.`), **including newlines.**
 
-#### Matching
-##### Low level functions
+## Matching
+
+### Low level functions
 - `regex:cmatch(str, offset, options)` low-level matching function
   - `str`: The string to match against
   - `offset`: Where to start matching
@@ -31,7 +30,7 @@ Arguments:
 **Note: `regex:cmatch()` returns wrong indexes (currently at version 2.0.2).
   The end index returned by `regex:cmatch()` is always off by 1 (-1 to get the actual end index).**
 
-##### High level functions
+### High level functions
 All the functions below can be in 2 forms:
 - `regex:fn(...)` where `regex` is the compiled regex instance
 - `regex.fn(pattern, ...)` where `pattern` is a pattern string to be compiled and used directly.

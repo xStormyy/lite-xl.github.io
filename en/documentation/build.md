@@ -1,9 +1,6 @@
----
-title: "Build"
----
+# Build
 
-Once you have downloaded the [source code][1],
-you can build Lite XL yourself using Meson.
+Once you have downloaded the source code, you can build Lite XL yourself using Meson.
 In addition, the `build-packages.sh` script can be used to compile Lite XL and
 create an OS-specific package for Linux, Windows or macOS.
 
@@ -25,7 +22,7 @@ Otherwise, if they are present, they will be used to compile Lite XL.
 If you compile Lite XL yourself,
 it is recommended to use the script `build-packages.sh`:
 
-```sh
+```bash
 bash build-packages.sh -h
 ```
 
@@ -64,7 +61,7 @@ As a special case on Windows the variable `$USERPROFILE` will be used instead.
 On Debian-based systems the required libraries and Meson can be installed
 using the following commands:
 
-```sh
+```bash
 # To install the required libraries:
 sudo apt install libfreetype6-dev libsdl2-dev
 
@@ -75,7 +72,7 @@ sudo apt install meson
 
 To build Lite XL with Meson the commands below can be used:
 
-```sh
+```bash
 meson setup --buildtype=release --prefix <prefix> build
 meson compile -C build
 DESTDIR="$(pwd)/lite-xl" meson install --skip-subprojects -C build
@@ -88,7 +85,7 @@ where `<prefix>` depends on the OS you are using:
 If you are using a version of Meson below 0.54
 you need to use diffent commands to compile and install:
 
-```sh
+```bash
 meson setup --buildtype=release build
 ninja -C build
 ninja -C build install
@@ -97,12 +94,12 @@ ninja -C build install
 ## macOS
 
 macOS is fully supported and a notarized app disk image is provided in the
-[release page][2]. In addition the application can be compiled using
-the generic instructions given above.
+[release page](https://github.com/lite-xl/lite-xl/releases/latest/). 
+In addition the application can be compiled using the generic instructions given above.
 
 ## Windows MSYS2
 
-The build environment chosen for Lite XL on Windows is [MSYS2][3].
+The build environment chosen for Lite XL on Windows is [MSYS2](https://www.msys2.org/).
 Follow the install instructions in the link.
 
 - Open `MinGW 64-bit` or `MinGW 32-bit` shell from the start menu.
@@ -124,7 +121,3 @@ pip3 install meson
 
 `${MINGW_PACKAGE_PREFIX}` expands either to `mingw-w64-i686` or `mingw-w64-x86_64`
 depending if the current shell is 32 or 64 bit.
-
-[1]: {{ 'en/documentation/build#source-code' | relative_url }}
-[2]: https://github.com/lite-xl/lite-xl/releases/latest/
-[3]: https://www.msys2.org/

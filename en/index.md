@@ -1,13 +1,7 @@
----
-title: "Lite XL"
-date_fmt: "%d %B %Y"
----
-A lightweight text editor written in Lua, adapted from [lite].
+# Lite XL
 
-![Screenshot]
+A lightweight, *simple*, fast, feature-filled, and extremely extensible text editor written in C, and Lua, adapted from [lite](https://github.com/rxi/lite/).
 
-{% include post.liquid %}
+![](img/editor.png)
 
 
-[lite]:       https://github.com/rxi/lite/
-[Screenshot]: {{ 'assets/img/screenshots/editor.png' | relative_url }}

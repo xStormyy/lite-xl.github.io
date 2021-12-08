@@ -1,6 +1,4 @@
----
-title: Using system fonts
----
+# Using system fonts
 
 lite-xl does not provide a convenient way to use fonts on the system.
 There is literally _different APIs for the each platforms we support (Windows, Linux and Mac).
@@ -9,12 +7,12 @@ installable on a lot of OSes.
 
 lite-xl has a [fontconfig plugin][2] that we can use to find system fonts.
 
-### Installing fontconfig
-##### Windows
+## Installing fontconfig
+#### Windows
 [mingw-w64-fontconfig][3] provides a build that can be used directly on Windows.
 Download the file, extract it to somewhere and (optionally) add it to the PATH.
 
-##### Linux
+#### Linux
 Check your distro-specific instructions.
 
 ```sh
@@ -27,12 +25,13 @@ dnf install fontconfig
 ...
 ```
 
-##### MacOS
+#### MacOS
 ```sh
 brew install fontconfig
 ```
 
 ### Setting up
+
 1. Install the plugin
 2. Put this in your user module:
 ```lua

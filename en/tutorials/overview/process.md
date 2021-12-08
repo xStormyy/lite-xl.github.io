@@ -1,6 +1,4 @@
----
-title: Process API
----
+# Process API
 
 Lite XL provides a process API to launch external applications. This API is meant to replace
 lua's `io.popen` and lite's [pipe-to-a-file][1] approach.
@@ -12,9 +10,9 @@ Advantages of this API includes:
 - Does not create temporary files
 - Mostly cross-platform (does not require special code for each shell)
 
-### Using the Process API
+## Using the Process API
 
-#### Error handling
+### Error handling
 - `process.start()` may throw errors if it cannot run the program.
 - `process.read*` and `process.write` functions may throw errors if
   - the process ended
@@ -22,7 +20,7 @@ Advantages of this API includes:
   - you closed the stream
 - there might be other errors to look forward to too
 
-#### Starting a process
+### Starting a process
 To start a process, use `process.start(args, options)`.
 
 Here are some of the more useful arguments.
@@ -39,7 +37,7 @@ for `options.std{in,out,err}`, valid values are:
 - `process.REDIRECT_DISCARD` (Discard the output. Use this to prevent buffering)
 - `process.REDIRECT_STDOUT` (`stderr` only, for redirecting `stderr` to `stdout`)
 
-#### Reading from process
+### Reading from process
 To read from `stdout` or `stderr` of a process, use `process:read_stdout()` and
 `process:read_stderr()` respectively.
 
@@ -62,19 +60,19 @@ while true do
 end
 ```
 
-#### Writing to process
+### Writing to process
 You can use `process:write(data)` to write a string to `stdin`.
 
-#### Checking completion
+### Checking completion
 - `process:running()` returns a boolean to indicate whether if the process is running.
 - `process:wait(time)` also does the same thing, but you specify how long it should wait (or 0 to return immediately).
 
-#### Terminating process
+### Terminating process
 - `process:terminate()` sends SIGTERM (or Windows equivalent) to the process.
 - `process:kill()` sends SIGKILL (or Windows equivalent) to the progress.
 ** Use this only if `process:terminate()` cannot kill the process, [as it can cause issues][3].
 
-#### Misc
+### Misc
 - `process:pid()` returns the PID of the process.
 **There are no guarantees for this PID to be correct if the process terminated early.**
 - `process:returncode()` returns the exit code of the process, if any
