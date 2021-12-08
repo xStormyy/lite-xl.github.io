@@ -15,7 +15,7 @@ jobs:
       - name: Install gems
         run: gem install redcarpet rouge
       - name: Build 
-        run: ruby scripts/index.rb
+        run: ruby scripts/site.rb
       - name: Upload to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
         with:
