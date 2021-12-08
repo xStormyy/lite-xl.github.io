@@ -12,6 +12,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
+      - name: Install gems
         run: gem install redcarpet rouge
       - name: Build 
         run: ruby scripts/index.rb
