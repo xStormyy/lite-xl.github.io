@@ -18,7 +18,7 @@
       header { width: 100%; max-width: 1200px; }
       header, links, logo { margin: 0 auto 24px auto; display: flex; align-items: center; position: relative; }
       logo > *, header > *, links > *, menu > * { margin: 0; font-size: 16px !important; padding: 0 8px; }
-      a, menu { text-decoration: none; color: #97979c; position: relative; cursor: pointer; }
+      a, menu { text-decoration: none; color: #c1c1c6; position: relative; cursor: pointer; }
       menu { padding: 0; }
       links h2 { padding: 0 16px; }
       a:hover, menu:hover, menu.active { color: #e1e1e6; }
@@ -2141,13 +2141,13 @@ lite-xl to wait for <code>fc-match</code>, which can be much slower.</p>
         if (target) {
           document.querySelectorAll('pages page.active').forEach(function(p) { p.classList.remove('active'); })
           target.classList.add('active');
-          history.pushState({}, '', window.location.pathname + (id && id != "index" ? "#" + id : ""));
+          history.pushState({}, (target.querySelector('h1') ? target.querySelector('h1').textContent : "Lite XL"), window.location.pathname + (id && id != "index" ? "?/" + id.replace(/\-/,"/") : ""));
         }
       }
       document.querySelectorAll('menu').forEach(function(e) { e.addEventListener('click', function(ev) { hideMenus(e); ev.stopPropagation(); e.classList.toggle('active'); }) })
       document.querySelector('expander').addEventListener('click', function(e) { document.querySelector('links').classList.toggle('active'); })
       document.querySelector('body').addEventListener('click', hideMenus);
-      setActive(window.location.hash.replace(/#/, "") || "index");
+      setActive(window.location.search.replace(/^\?/, "") || "index");
       document.querySelectorAll('header a, pages a').forEach(function(a) { 
         if (a.getAttribute('href').charAt(0) == "/") { 
           a.addEventListener('click', function(ev) {
