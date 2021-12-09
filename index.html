@@ -188,8 +188,7 @@ pre .m, pre .mb, pre .mf, pre .mh, pre .mi, pre .il, pre .mo, pre .mx {
 }
 pre .ss {
   color: #90a959;
-}</style><page id='page-en-documentation-keymap-macos'>
-<h1 id="macos-keymap">MacOS Keymap</h1>
+}</style><page id='page-en-documentation-keymap-macos'><h1 id="macos-keymap">MacOS Keymap</h1>
 
 <p>Keymaps on different operating systems have the same functionality, just bound slightly differently
 in order to conform to normal expectations for that operating system.</p>
@@ -533,10 +532,8 @@ in order to conform to normal expectations for that operating system.</p>
 <td><code>find-replace:previous-find</code></td>
 </tr>
 </tbody></table>
-
 </page>
-<page id='page-en-documentation-build'>
-<h1 id="build">Build</h1>
+<page id='page-en-documentation-build'><h1 id="build">Build</h1>
 
 <p>Once you have downloaded the source code, you can build Lite XL yourself using Meson.
 In addition, the <code>build-packages.sh</code> script can be used to compile Lite XL and
@@ -650,10 +647,8 @@ pip3 <span class="nb">install </span>meson
 </pre>
 <p><code>${MINGW_PACKAGE_PREFIX}</code> expands either to <code>mingw-w64-i686</code> or <code>mingw-w64-x86_64</code>
 depending if the current shell is 32 or 64 bit.</p>
-
 </page>
-<page id='page-en-documentation-keymap'>
-<h1 id="default-keymap">Default Keymap</h1>
+<page id='page-en-documentation-keymap'><h1 id="default-keymap">Default Keymap</h1>
 
 <p>Keymaps on different operating systems have the same functionality, just bound slightly differently
 in order to conform to normal expectations for that operating system.</p>
@@ -989,10 +984,8 @@ in order to conform to normal expectations for that operating system.</p>
 <td><code>find-replace:previous-find</code></td>
 </tr>
 </tbody></table>
-
 </page>
-<page id='page-en-documentation-usage'>
-<h1 id="usage">Usage</h1>
+<page id='page-en-documentation-usage'><h1 id="usage">Usage</h1>
 
 <p>Lite XL is a lightweight text editor written mostly in Lua — it aims to provide
 something practical, pretty, <em>small</em> and fast, implemented as simply as
@@ -1197,10 +1190,8 @@ is actually reloaded when saving the user&#39;s configuration file.</p>
 
 <p>Color themes can be downloaded from the <a href="https://github.com/rxi/lite-colors">color themes repository</a>.
 They are included with Lite XL release packages.</p>
-
 </page>
-<page id='page-en-about-contributors'>
-<h1 id="contributors">Contributors</h1>
+<page id='page-en-about-contributors'><h1 id="contributors">Contributors</h1>
 
 <table><thead>
 <tr>
@@ -1253,10 +1244,8 @@ They are included with Lite XL release packages.</p>
 <td>Continuos integration configuration.</td>
 </tr>
 </tbody></table>
-
 </page>
-<page id='page-en-about-features'>
-<h1 id="features">Features</h1>
+<page id='page-en-about-features'><h1 id="features">Features</h1>
 
 <p>Currently, Lite XL offers a lot of features out of the box.</p>
 
@@ -1318,10 +1307,8 @@ An alternative approach is to create our own IPC mechanism, but that&#39;s <a hr
 <p>A terminal is complex to implement.
 There are projects that <em>can</em> be ported to Lua, such as <a href="https://xtermjs.org/">xterm.js</a>.
 If someone is interested, they can do so.</p>
-
 </page>
-<page id='page-en-about-faq'>
-<h1 id="faq">FAQ</h1>
+<page id='page-en-about-faq'><h1 id="faq">FAQ</h1>
 
 <h4 id="can-i-get-smart-autocompletion-intellisense-lsp">Can I get smart autocompletion (intellisense/LSP)?</h4>
 
@@ -1415,17 +1402,13 @@ these are a list of plugins that just makes Lite XL a lot more pleasant.</p>
 <h4 id="wheres-feature-x-how-about-y">Where&#39;s feature X? How about Y?</h4>
 
 <p>You can get more info in the <a href="/about/features">Features page</a>.</p>
-
 </page>
-<page id='page-en-about-screenshots'>
-<h1 id="screenshots">Screenshots</h1>
+<page id='page-en-about-screenshots'><h1 id="screenshots">Screenshots</h1>
 
 <p><a href="img/editor.png"><img src="img/editor.png" alt=""></a>
 <a href="img/editor2.png"><img src="img/editor2.png" alt=""></a></p>
-
 </page>
-<page id='page-en-downloads'>
-<h1 id="downloads">Downloads</h1>
+<page id='page-en-downloads'><h1 id="downloads">Downloads</h1>
 
 <h2 id="source-code">Source Code</h2>
 
@@ -1450,10 +1433,8 @@ or directly via git:</p>
 </pre>
 <p>The <a href="https://ports.macports.org/port/lite-xl-luajit/">LuaJIT-based version</a> of Lite XL is also available:</p>
 <pre><span class="nb">sudo </span>port <span class="nb">install </span>lite-xl-luajit
-</pre>
-</page>
-<page id='page-en-tutorials-overview-regex'>
-<h1 id="regex-api">Regex API</h1>
+</pre></page>
+<page id='page-en-tutorials-overview-regex'><h1 id="regex-api">Regex API</h1>
 
 <p>This API provides PCRE regular expressions for those who needs more power in matching text.
 This API written in C and Lua.</p>
@@ -1506,10 +1487,8 @@ the same arguments as <code>regex:cmatch()</code></li>
 <li><code>regex:gsub(str, replacement)</code> replaces matches in <code>str</code> with <code>replacement</code>.
 Capture groups are identified with <code>{{ pages }}</code> to <code></code>, this might change in the future.</li>
 </ul>
-
 </page>
-<page id='page-en-tutorials-overview-process'>
-<h1 id="process-api">Process API</h1>
+<page id='page-en-tutorials-overview-process'><h1 id="process-api">Process API</h1>
 
 <p>Lite XL provides a process API to launch external applications. This API is meant to replace
 lua&#39;s <code>io.popen</code> and lite&#39;s <a href="https://github.com/rxi/console/blob/fb3d414d085d4110364314d6cd8380dc1d386249/init.lua#L100">pipe-to-a-file</a> approach.</p>
@@ -1606,10 +1585,8 @@ end
 <li><code>process:returncode()</code> returns the exit code of the process, if any</li>
 <li><code>process:close_stream()</code> closes <code>stdin</code>, <code>stdout</code> or <code>stderr</code> stream of the process.</li>
 </ul>
-
 </page>
-<page id='page-en-tutorials-overview-system'>
-<h1 id="system-api">System API</h1>
+<page id='page-en-tutorials-overview-system'><h1 id="system-api">System API</h1>
 
 <p>This is where Lite XL&#39;s lua code interact with its underlying C engine.
 Some of the functions here will be omitted because they&#39;re not useful for
@@ -1703,10 +1680,8 @@ matches the haystack.
 </ul>
 
 <p>[1]: {{ &quot;/en/tutorials/overview/process&quot; | relative_url }}</p>
-
 </page>
-<page id='page-en-tutorials-simple-plugin'>
-<h1 id="simple-plugin">Simple Plugin</h1>
+<page id='page-en-tutorials-simple-plugin'><h1 id="simple-plugin">Simple Plugin</h1>
 
 <h3 id="what-is-simple">What is Simple?</h3>
 
@@ -1871,10 +1846,8 @@ of the code in the file does.</p>
    <span class="p">[</span><span class="s2">"alt+s"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"simple:setshow"</span><span class="p">,</span>
    <span class="p">[</span><span class="s2">"alt+t"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"simple:toggle"</span><span class="p">,</span>
 <span class="p">}</span>
-</pre>
-</page>
-<page id='page-en-tutorials-api-overview'>
-<h1 id="api-overview">API Overview</h1>
+</pre></page>
+<page id='page-en-tutorials-api-overview'><h1 id="api-overview">API Overview</h1>
 
 <h3 id="this-is-a-work-in-progress">This is a work in progress.</h3>
 
@@ -1889,10 +1862,8 @@ Thus, we&#39;ll not explain <em>everything</em>, only the more important and fre
 <li><a href="/tutorials/overview/system">System API</a></li>
 <li><a href="/tutorials/overview/regex">Regex API</a></li>
 </ul>
-
 </page>
-<page id='page-en-tutorials-syntax-highlighting'>
-<h1 id="syntax-highlighting">Syntax Highlighting</h1>
+<page id='page-en-tutorials-syntax-highlighting'><h1 id="syntax-highlighting">Syntax Highlighting</h1>
 
 <h2 id="how-to-create-syntax-highlighting-plugins-for-lite-xl">How to create syntax highlighting plugins for Lite XL</h2>
 
@@ -2058,10 +2029,8 @@ The 3rd part, the <code>&#39;\&#39;</code> part in this example, specifies the c
 
 <p>To reload the core, you can either restart Lite XL, or reload the core from the command palette, without needing to restart.
 To do this, type <code>ctrl+shit+p</code> to show the command palette, then select <code>Core: Restart</code> (or type <code>crr</code> or something similar to match it), then press Enter. You will need to restart the core after any changes you make to the syntax highlighting definition.</p>
-
 </page>
-<page id='page-en-tutorials-system-fonts'>
-<h1 id="using-system-fonts">Using system fonts</h1>
+<page id='page-en-tutorials-system-fonts'><h1 id="using-system-fonts">Using system fonts</h1>
 
 <p>lite-xl does not provide a convenient way to use fonts on the system.
 There is literally _different APIs for the each platforms we support (Windows, Linux and Mac).
@@ -2108,15 +2077,12 @@ dnf <span class="nb">install </span>fontconfig
 <p>Note that the font might not load immediately (because we need to wait for <code>fc-match</code> to return.
 If you want that, replace <code>fontconfig.use</code> with <code>fontconfig.use_blocking</code>. Doing this will force
 lite-xl to wait for <code>fc-match</code>, which can be much slower.</p>
-
 </page>
-<page id='page-en-index'>
-<h1 id="lite-xl">Lite XL</h1>
+<page id='page-en-index'><h1 id="lite-xl">Lite XL</h1>
 
 <p>A lightweight, <em>simple</em>, fast, feature-filled, and extremely extensible text editor written in C, and Lua, adapted from <a href="https://github.com/rxi/lite/">lite</a>.</p>
 
 <p><img src="img/editor.png" alt=""></p>
-
 </page>
       </pages>
       <sidebar>
