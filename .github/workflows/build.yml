@@ -15,11 +15,22 @@ jobs:
           ruby-version: 2.7
       - name: Install gems
         run: gem install redcarpet rouge
-      - name: Build 
+      - name: Build (For forks)
+        if: ${{ github.repository_owner != 'lite-xl' }}
+        run: ruby scripts/site.rb "/$(echo '${{ github.repository }}' | cut -d/ -f2)"
+      - name: Build (for lite-xl org)
+        if: ${{ github.repository_owner == 'lite-xl' }}
         run: ruby scripts/site.rb
       - name: Upload to GitHub pages
+        if: ${{ github.repository_owner == 'lite-xl' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           cname: lite-xl.com
+      - name: Upload to GitHub pages
+        if: ${{ github.repository_owner != 'lite-xl' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
