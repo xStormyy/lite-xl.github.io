@@ -94,12 +94,12 @@ ninja -C build install
 ## macOS
 
 macOS is fully supported and a notarized app disk image is provided in the
-[release page](https://github.com/lite-xl/lite-xl/releases/latest/). 
+[release page][1]. 
 In addition the application can be compiled using the generic instructions given above.
 
 ## Windows MSYS2
 
-The build environment chosen for Lite XL on Windows is [MSYS2](https://www.msys2.org/).
+The build environment chosen for Lite XL on Windows is [MSYS2][2].
 Follow the install instructions in the link.
 
 - Open `MinGW 64-bit` or `MinGW 32-bit` shell from the start menu.
@@ -121,3 +121,6 @@ pip3 install meson
 
 `${MINGW_PACKAGE_PREFIX}` expands either to `mingw-w64-i686` or `mingw-w64-x86_64`
 depending if the current shell is 32 or 64 bit.
+
+[1]: https://github.com/lite-xl/lite-xl/releases/latest/
+[2]: https://www.msys2.org/

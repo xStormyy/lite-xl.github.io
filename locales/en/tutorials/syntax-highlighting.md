@@ -8,16 +8,16 @@ These different token types are then given different colors by your chosen color
 
 Like other plugins, syntax definitions are sourced from the following folders, in order:
 
-- /usr/share/lite-xl/plugins/
-- $HOME/.config/lite-xl/plugins/
+- `/usr/share/lite-xl/plugins/`
+- `$HOME/.config/lite-xl/plugins/`
 
 NOTE: The exact location of these folders will depend on your OS and installation method. For example, on Windows, the variable `$USERPROFILE` will be used instead of `$HOME`.
 
 The user module folder for Lite XL can generally be found in these places on different OSes:
 
-- Windows: C:\Users\(username)\.config\lite-xl\
-- MacOS: /Users/(usernmame)/.config/lite-xl/
-- Linux: /home/(username)/.config/lite-xl/
+- Windows: `C:\Users\(username)\.config\lite-xl`
+- MacOS: `/Users/(usernmame)/.config/lite-xl`
+- Linux: `/home/(username)/.config/lite-xl`
 
 So, to create a new syntax definition on Linux, you can just create a `.lua` file in your `$HOME/.config/lite-xl/plugins/` folder.
 

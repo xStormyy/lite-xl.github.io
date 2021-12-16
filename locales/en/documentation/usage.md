@@ -166,7 +166,7 @@ local keymap = require "core.keymap"
 keymap.add { ["ctrl+q"] = "core:quit" }
 ```
 
-A list of default mappings can be viewed [here](/documentation/keymap).
+A list of default mappings can be viewed [here][1].
 
 ## Plugins
 
@@ -188,7 +188,7 @@ only on a given project) the plugin can be placed somewhere other than the
 `plugins` directory so that it is not automatically loaded. The plugin can
 then be loaded manually as needed by using the `require` function.
 
-Plugins can be downloaded from the [plugins repository](https://github.com/lite-xl/lite-plugins).
+Plugins can be downloaded from the [plugins repository][2].
 
 ## Restarting the editor
 
@@ -214,5 +214,10 @@ In the Lite editor the function `require` is used instead of `core.reload_module
 In Lite XL `core.reload_module` should be used to ensure that the color module
 is actually reloaded when saving the user's configuration file.
 
-Color themes can be downloaded from the [color themes repository](https://github.com/rxi/lite-colors).
+Color themes can be downloaded from the [color themes repository][3].
 They are included with Lite XL release packages.
+
+
+[1]: documentation/keymap
+[2]: https://github.com/rxi/lite-plugins
+[3]: https://github.com/rxi/lite-colors
