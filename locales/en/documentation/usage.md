@@ -60,6 +60,7 @@ On Windows, the variable `$USERPROFILE` will be used instead of
 `$HOME`.
 
 **tl;dr:**
+
 - Windows: `C:\Users\(username)\.config\lite-xl\init.lua`
 - MacOS: `/Users/(usernmame)/.config/lite-xl/init.lua`
 - Linux: `/home/(username)/.config/lite-xl/init.lua`
