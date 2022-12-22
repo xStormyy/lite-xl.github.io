@@ -76,7 +76,9 @@ files = Dir
     files + Dir
       .glob("locales/#{locale}/**/*.html")
       .select { |file| file != "locales/#{locale}/template.html" }
-      .each { |file| FileUtils.copy_file(file, root + file.gsub("locales/", ""), true, true) }
+      .map { |file| [file, root + file.gsub("locales/", "")] }
+      .each { |(src, dest)| FileUtils.copy_file(src, dest, true, true) }
+      .map { |(_, dest)| dest }
   }
   .flatten
   .each { |path| puts("#{path} generated.") if verbose }
