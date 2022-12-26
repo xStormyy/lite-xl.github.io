@@ -15,6 +15,8 @@ jobs:
           ruby-version: 2.7
       - name: Install gems
         run: gem install redcarpet rouge
+      - name: Set environment variables
+        run: echo "SITE_ROOT=deploy" >> $GITHUB_ENV
       - name: Build (for forks)
         if: ${{ github.repository_owner != 'lite-xl' }}
         run: ruby site.rb "/$(echo '${{ github.repository }}' | cut -d/ -f2)"
@@ -26,11 +28,11 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./deploy
           cname: lite-xl.com
       - name: Upload to GitHub pages (for forks)
         if: ${{ github.repository_owner != 'lite-xl' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./deploy
