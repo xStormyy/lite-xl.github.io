@@ -12,6 +12,21 @@ This website is built with markdown and a tiny ruby script as a static site gene
 > the full filename (with the `.html` file extension) while the website does not use that. `http-server` does not have
 > this limitation.
 
+## Repo Structure
+
+- `assets/`: Asset files (images, js, css, etc.)
+- `assets/img`: Images used for the website
+- `assets/javascript.js`: Main JavaScript file used for the website
+- `assets/stylesheet.css`: Main CSS file used for the website
+- `locales/`: Localized website content
+- `locales/en`: English website content
+- `locales/en/template.html`: Template HTML for the english website
+- `locales/en/404.md`: The content shown to users when the page is not found
+- `.editorconfig`: EditorConfig for this website
+- `404.html`: The content shown to users when the page is not found
+- `index.html`: A symlink to index.html in the default locale
+- `site.rb`: Website generator
+
 ## Extra goodies
 
 #### Auto updates
