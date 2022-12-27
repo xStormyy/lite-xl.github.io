@@ -119,10 +119,10 @@ File.write("#{root}sitemap.txt", files.join("\n") + "\n")
 File.write("#{root}posts.json", JSON.generate(indexFile)) if generateIndex
 
 # copy index.html for default locale
-FileUtils.cp("#{root}#{default_locale}/index.html", "#{root}index.html")
+FileUtils.copy_file("#{root}#{default_locale}/index.html", "#{root}index.html")
 
 # copy other files
 unless root == ""
   FileUtils.cp_r("assets", "#{root}assets")
-  FileUtils.cp("404.html", "#{root}404.html")
+  FileUtils.copy_file("404.html", "#{root}404.html")
 end
