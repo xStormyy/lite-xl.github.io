@@ -37,11 +37,13 @@ improvements as we review your PRs.
 
 #### Don't
 
-Submit content that does not flow well and contain grammatical mistakes.
+Submit content that is badly-written or irrelevant to Lite XL.
 
 #### Do
 
-Spellcheck your work.
+Submit content that is well-written and relevant to Lite XL.
+
+Proofread your work before submitting.
 
 #### Don't
 
