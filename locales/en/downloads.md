@@ -13,7 +13,7 @@ Alternatively, you can install lite-xl from your distribution's package manager.
 - [Mac OS][5] (MacPorts)
 - [Arch Linux][6] (AUR)
 - [NixOS][7] (nixpkgs)
-- [Fedora][8] (copr)
+- [Fedora][8]
 
 ```sh
 choco install lite-xl                                        # chocolatey
@@ -21,7 +21,7 @@ scoop bucket add extras && scoop install lite-xl             # scoop
 sudo port install lite-xl                                    # macports
 yay -S lite-xl                                               # or your favorite AUR helper
 nix-env -i lite-xl                                           # nixos
-sudo dnf copr enable sentry/lite && sudo dnf install lite-xl # fedora (copr)
+sudo dnf install lite-xl # fedora
 ```
 
 ## Source Code
@@ -41,5 +41,5 @@ git clone https://github.com/lite-xl/lite-xl.git
 [5]: https://ports.macports.org/port/lite-xl/
 [6]: https://aur.archlinux.org/packages/lite-xl/
 [7]: https://github.com/NixOS/nixpkgs/blob/release-21.11/pkgs/applications/editors/lite-xl/default.nix
-[8]: https://copr.fedorainfracloud.org/coprs/sentry/lite/packages/
+[8]: https://src.fedoraproject.org/rpms/lite-xl
 [9]: https://github.com/lite-xl/lite-xl
