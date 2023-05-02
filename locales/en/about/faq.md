@@ -44,7 +44,7 @@ For example: `Core: Find Command` → `core:find-command`
 
 #### What version of Lua does Lite XL use?
 
-Lua 5.2.4. There's some activity around using LuaJIT instead (which is 5.1) but it can provide some Lua 5.2 compatibility.
+Lua 5.4.
 
 #### Vim mode?
 
@@ -61,7 +61,6 @@ these are a list of plugins that just makes Lite XL a lot more pleasant.
 | [bracketmatch]       | Highlight matching brackets
 | [ephemeral_tabs]     | Ephemeral tabs (previewing files without creating multiple tabs)
 | [gitdiff_highlight]  | Git diff gutter
-| [linecopypaste]      | Copy/Paste lines when nothing is selected
 | [lint+]              | Linter support
 | [minimap]            | Minimap
 | [selectionhighlight] | Highlight code that matches the selection
@@ -80,7 +79,6 @@ You can get more info in the [Features page](/en/about/features).
 [bracketmatch]:       https://github.com/lite-xl/lite-xl-plugins/blob/master/plugins/bracketmatch.lua?raw=1
 [ephemeral_tabs]:     https://github.com/lite-xl/lite-xl-plugins/blob/master/plugins/ephemeral_tabs.lua?raw=1
 [gitdiff_highlight]:  https://github.com/vincens2005/lite-xl-gitdiff-highlight
-[linecopypaste]:      https://github.com/lite-xl/lite-xl-plugins/blob/master/plugins/linecopypaste.lua?raw=1
 [lint+]:              https://github.com/liquid600pgm/lintplus
 [minimap]:            https://github.com/lite-xl/lite-xl-plugins/blob/master/plugins/minimap.lua?raw=1
 [selectionhighlight]: https://github.com/lite-xl/lite-xl-plugins/blob/master/plugins/selectionhighlight.lua?raw=1
