@@ -6,9 +6,7 @@ Check out the [LSP] plugin.
 
 #### Where is the integrated terminal?
 
-Work is being done on [lite-xl-terminal] and [lite-xl-tmt].
-Both plugins has their own supported features and bugs
-so you should try both out and see which one works for you.
+You can try [lite-xl-terminal].
 
 #### Tabs and indent size?
 
@@ -71,9 +69,8 @@ these are a list of plugins that just makes Lite XL a lot more pleasant.
 You can get more info in the [Features page](/en/about/features).
 
 
-[LSP]:                https://github.com/jgmdev/lite-xl-lsp
-[lite-xl-terminal]:   https://github.com/benjcollins/lite-xl-terminal
-[lite-xl-tmt]:        https://github.com/ColonelPhantom/lite-xl-tmt
+[LSP]:                https://github.com/lite-xl/lite-xl-lsp
+[lite-xl-terminal]:   https://github.com/adamharrison/lite-xl-terminal
 [vibe]:               https://github.com/eugenpt/lite-xl-vibe
 [autoinsert]:         https://github.com/lite-xl/lite-xl-plugins/blob/master/plugins/autoinsert.lua?raw=1
 [bracketmatch]:       https://github.com/lite-xl/lite-xl-plugins/blob/master/plugins/bracketmatch.lua?raw=1
