@@ -21,7 +21,7 @@ scoop bucket add extras && scoop install lite-xl             # scoop
 sudo port install lite-xl                                    # macports
 yay -S lite-xl                                               # or your favorite AUR helper
 nix-env -i lite-xl                                           # nixos
-sudo dnf install lite-xl # fedora
+sudo dnf install lite-xl                                     # fedora
 ```
 
 ## Source Code
