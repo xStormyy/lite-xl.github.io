@@ -1,24 +1,25 @@
-# Simple Plugin
+# Einfache Plugins
 
-### What is Simple?
-Simple is a very basic plugin written with the intention of introducing developers
-who are new to Lite XL to the process of writing plugins for the editor.
+### Was ist Simple?
+Simple ist ein einfaches Plugin dass geschrieben wurde mit der Absicht Entwickler
+die neu bei Lite XL sind, den Prozess des Schreibens von Plugins für den Editor zu zeigen.
 
-### What does the plugin do?
-The plugin displays a message (that is taken as input from the user) at the top
-right corner of the editor window. It also allows the user to toggle
-the visibility of the message.
+### Was macht das Plugin?
+Das Plugin zeigt eine Nachricht (Das als Eingabe Des Benutzers übernommen wird) 
+am oberen rechten Eck des Editorfensters. Es erlaubt auch den Benutzer das Umschalten der Sichtbarkeit 
+der Nachricht.
 
-### I can't write Lua!
-If you come from other programming languages, take a look at [Lua cheatsheet][1].
-If you're new to programming, you can read [this][2].
+### Ich kann nicht Lua schreiben!
+Wenn du von anderen Programmierungsprachen kommst, dann schau dir das [Lua cheatsheet][1] an.
+Wenn du neu bei programmieren bist, dann schau dir [das (English)][2] an.
 
-### Format of the tutorial
-The code contains comments detailing what most (if not all)
-of the code in the file does.
+### Das Format vom Tutorial
+Das Code enthält Kommentare die detailieren was das Meiste (wenn nicht alles) 
+im Code macht.
 
+Die Kommentare sind gerade in Englisch, aber ich glaub das wirst du schon verstehen :)
 
-### The code :
+### Das Code:
 ```lua
 -- mod-version:3
 
@@ -181,9 +182,9 @@ keymap.add {
 }
 ```
 
-### Further reading
-- [Lite: An Implementation Overview][3], an excellent post by rxi that stays mostly relevant to lite-xl.
-- [API overview][4], where some of the APIs are explained.
+### Zusätzliches
+- [Lite: Eine Implementation Übersicht (English)][3], ein exzellentes Post von rxi dass meistens zu lite-xl relevant bleibt.
+- [API Übersicht][4], wo mache APIs erklärt werden.
 
 
 [1]: https://devhints.io/lua

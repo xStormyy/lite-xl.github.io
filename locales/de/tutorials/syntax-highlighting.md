@@ -1,29 +1,30 @@
-# Syntax Highlighting
+<!-- Delete later: continue at line 161 -->
 
-## How to create syntax highlighting plugins for Lite XL
+# Syntaxhervorhebung
 
-Syntax highlighting plugins for Lite XL are Lua files. These define some patterns or regular expressions that
-match different parts of a given language, assigning token types to each match.
-These different token types are then given different colors by your chosen color scheme.
+## So erstellt man Syntaxhervorhebung für Lite XL
+Syntaxhervorhebung Plugins für Lite XL sind Lua Dateien. Diese Dateien definieren Muster oder Regex
+verschiedene teile einer gegebenen Sprache, man ordnet Token-Typen zu Übereinstimmung zu.
+Diese verschiedenen Token-Typen werden dann verschiedene farben von deinem ausgesuchten Color Scheme gegeben.
 
-Like other plugins, syntax definitions are sourced from the following folders, in order:
+Wie andere Plugins, Syntax Definitionen werden von den folgenden Ordnern empfangen, in der folgenden Reihenfolge:
 
 - `/usr/share/lite-xl/plugins/`
 - `$HOME/.config/lite-xl/plugins/`
 
-NOTE: The exact location of these folders will depend on your OS and installation method. For example, on Windows, the variable `$USERPROFILE` will be used instead of `$HOME`.
+BEMERKE: Der genaue Ort von diesen Ordnern wird von dein Betriebssystem und Installationsmethode abhängen. Zum Beispiel, unter Windows wird das Variable `$USERPROFILE` benutzt werden anstatt `$HOME`.
 
-The user module folder for Lite XL can generally be found in these places on different OSes:
+Der Benutzer Modul Ordner für Lite Xl kann in diesen Orten auf different Betriebssystemen gefunden werden:
 
-- Windows: `C:\Users\(username)\.config\lite-xl`
-- MacOS: `/Users/(usernmame)/.config/lite-xl`
-- Linux: `/home/(username)/.config/lite-xl`
+- Windows: `C:\Users\(nutzername)\.config\lite-xl`
+- MacOS: `/Users/(nutzername)/.config/lite-xl`
+- Linux: `/home/(nutzername)/.config/lite-xl`
 
-So, to create a new syntax definition on Linux, you can just create a `.lua` file in your `$HOME/.config/lite-xl/plugins/` folder.
+Also, um eine neue Syntax Definition auf Linux zu erstellen, musst du eine `.lua` Datei in dein `$HOME/.config/lite-xl/plugins/` Ordner machen.
 
-## What syntax token types are supported?
+## Welche Syntax-Token arten sind unterstützt?
 
-The supported syntax token types, defined by `lite-xl/core/style.lua`, are:
+Die unterstützten Syntax_Token art, definiert von `lite-xl/core/style.lua`, sind:
 
 - normal
 - symbol
@@ -36,13 +37,15 @@ The supported syntax token types, defined by `lite-xl/core/style.lua`, are:
 - operator
 - function
 
-In your syntax highlighting plugin, you write patterns to match parts of the language syntax, assigning these token types to matches. You don't have to use them all - just use as many as you need for your language.
+In dein Syntaxhervorhebung Plugin, schreibst du Muster um Teile der Sprachen-Syntax zu entsprechen, und um Token-Typen zu übereinstimmen. Du musst nicht alle benutzen - benutze so viele die du brauchst für deine Sprache.
 
 Let's walk through an example syntax definition and see how this works.
 
-## Example syntax: ssh config files
+Gehen wir mal durch eine Beispiel Syntax Definition und wir werden sehen wie es funktioniert.
 
-This is a small, simple example of a syntax definition. It's intended to highlight SSH Config files and looks like this:
+## Beispiel Syntax: ssh config Dateien
+
+Das ist ein kleines, simples Beispiel von einer Syntax Definition, Es soll eine SSH config Datei hervorheben und es sieht so aus:
 
 ```lua
 -- mod-version:2 -- lite-xl 2.0
@@ -78,85 +81,85 @@ syntax.add {
 }
 ```
 
-Let's take each section in turn and see how it works.
+Schauen wir uns mal jeden Teil an und schauen wie es funktioniert.
 
 ### Header
 
-The first line is a Lua comment & tells Lite XL which version this plugin requires. The second imports the `core.syntax` module
-for us to use:
+Die erste Zeile ist ein Lua kommentar und sagt Lite XL welche version dieses Plugin braucht. Die zweite Zeile importiert das `core.syntax` Modul
+dass wir nutzen können:
 
 ```lua
 -- mod-version:2 -- lite-xl 2.0
 local syntax = require "core.syntax"
 ```
 
-We then add a syntax definition to lite, using `syntax.add {...}`. The contents of this definition are covered next.
+Dann fügen wir eine Syntax Definition mit `syntax.add {...}` zu lite ein.
 
 #### Files
 
-The `files` property tells Lite XL which files this syntax should be used for. This is a Lua pattern that matches against the full path of the file being opened. For example, to match against Markdown files - with either a `.md` or a `.markdown` extension,
-you could do this:
+Die `files` Eigenschaft sagt Lite XL welche Dateien these Syntax benutzt werden soll. Das ist ein Lua Muster, das mit dem vollständigen Pfad der geöffneten Datei übereinstimmt. Zum Beispiel, um gegen Markdown Dateien zu übereinstimmen - mit entweder eine `.md` oder eine `.markdown` Erweiterung,
+du könntest das machen:
 
 ```lua
 files = { "%.md$", "%.markdown$" },
 ```
 
-In our original example, we match against the end of the path rather than the extension, because SSH config files don't have extensions - and we don't want to match all `config` files. We expect the path for SSH config files to look something like one of these:
+In unseren original Beispiel, gleichen wir mit dem Ende des Pfads und nicht mit der Erweiterung ab, weil SSH config Dateien keine Erweiterung hat - und wir nicht alle `config` Dateien abgleichen. Wir erwarten den Pfad für SSH config Dateien so auszusehen:
 
 - `~/.ssh/config`
 - `/etc/ssh/ssh_config`
 - `/etc/ssh/sshd_config`
 
-This pattern matches paths that look like that:
+Dieses Muster gleicht Pfade ab die so aussehen:
 
 ```lua
 files = { "sshd?/?_?config$" },
 ```
 
-### Comment
+### Kommentare
 
-The comment property _doesn't_ define which parts of the syntax are comments - see Patterns for that, below. This property tells Lite XL which character to insert at the start of selected lines when you press `ctrl+/`.
-You can also use `block_comment` to tell Lite XL how to create multiline / block comments.
+Die Kommentar Eigenschaft definiert _nicht_ welche Teile der Syntax Kommentare sind - Schaue auf Muster für das unten. Diese Eigenschaft sagt Lite XL welche Charaktere beim Anfang der ausgewählten Zeilen hinzufügt werden sollen, wenn du `ctrl+/` drückst.
+Du kannst auch `block_comment` benutzen um Lite XL zu sagen, wie es multiline oder Block Kommentare machen soll.
 
-### Patterns
+### Muster
 
-A given piece of text can only match one pattern. Once Lite XL decides that a piece of text matches a pattern, it will assign that token type to that piece and move on.
-Patterns are tested in the order that they are written in the syntax definition, so the first match will win.
+Ein gegebener Textabschnitt kann nur ein Muster abgleicht werden. Wenn Lite XL einmal einschieden hat, dass es mit einem Muster übereinstimmt, dann wird es den Token-Typen zuweisen und es wird weitergehen.
+Muster werden getestet in der Reihenfolge wie es in der Syntax Definition geschrieben wurde, also wird das erste Übereinstimmen gewinnen.
 
-Each pattern takes one of the following forms:
+Jedes Muster nimmt einer dieser Formen an:
 
-#### Simple Pattern
+#### Einfaches Muster
 
 ```lua
 { pattern = "#.*\n",        type = "comment" },
 ```
 
-This form matches the line against the pattern and if it matches, assigns the matching text to the given token `type` - `comment`, in this case.
+Diese Form gleicht die Zeile mit dem Muster ab und wenn es abstimmt, weist es in diesem Fall den passenden Text den gebenen Token `type` - `comment` zu.
 
-#### Start & End Pattern
+#### Start- & Endmuster
 
 ```lua
 { pattern = { "%[", "%]" }, type = "keyword" },
 ```
 
-This form has two patterns - one that matches against the start of the range and one that matches against the end. Everything between the start and the end will be assigned the given token `type`.
+Diese Form hat zwei Muster - eines das mit dem Anfang des Bereichs übereinstimmt und eines dass mit dem Ende übereinstimmt. Alles zwischen den Anfang und den Ende wird den Token `type` zugewiesen.
 
-#### Start & End Pattern, with Escape
+#### Start- & Endmuster, mit Ausgang
 
 ```lua
 { pattern = { '"', '"', '\\' }, type = "string" },
 ```
 
-This is the same as the previous form, but with an extra, third parameter.
-The 3rd part, the `'\\'` part in this example, specifies the character that allows escaping the closing match.
+Dieses ist das Gleiche wie die letzte Form, aber mit einem dritten Parameter.
+Der dritte Teil, der `'\\'` Teil in diesem Beispiel, spezifiziert den Charakter dass entkommen vom Schlussübereinstimmung ermöglicht.
 
-For more on Lua Patterns, see: [Lua Pattern Reference](https://www.lua.org/manual/5.3/manual.html#6.4.1)
+Für mehr Information von Lua Muster, sehe [Lua Muster Referenz (English)](https://www.lua.org/manual/5.3/manual.html#6.4.1)
 
-If you need to use PCRE Regular Expressions, instead of Lua Patterns, you can use the `regex` keyword here, instead of `pattern`.
+Wenn du PCRE Regular Expressions anstatt Lua Muster benutzen musst, kannst du das Stichwort `regex` anstelle von `pattern` benutzen.
 
-### Symbols
+### Symbole
 
-> This is **not related to the `symbol` token type**.
+> Dieser Teil ist **nicht mit dem `symbol` Token-Typ verwandt**.
 
 The symbols section allows you to assign token types to particular keywords or strings - usually reserved words in the language you are highlighting.
 The token type in this section **always take precedence** over token types declared in patterns.

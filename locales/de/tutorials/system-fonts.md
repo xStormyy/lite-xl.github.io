@@ -1,4 +1,4 @@
-# Using system fonts
+# System Schriftarten Benutzen
 
 Lite XL bietet keinen Weg um Schriftarten vom System zu benutzen.
 Weil _jede Platform die wir unterstützen (Windows, Linux und Mac)_ macht es anders.
