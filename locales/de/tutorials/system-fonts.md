@@ -1,10 +1,10 @@
-# System Schriftarten Benutzen
+# Systemschriftarten Benutzen
 
 Lite XL bietet keinen Weg um Schriftarten vom System zu benutzen.
-Weil _jede Platform die wir unterstützen (Windows, Linux und Mac)_ macht es anders.
+Weil _jede Platform die wir unterstützen (Windows, Linux und Mac)_ es anders macht.
 Hier kommt [fontconfig][1] zur Rettung. fontconfig kann man auf verschiedene Betriebssysteme installieren.
 
-lite-xl hat ein [fontconfig Plugin][2] dass wir benutzen können um System Schriftarten zu finden.
+lite-xl hat ein [fontconfig Plugin][2] dass wir benutzen können um Systemschriftarten zu finden.
 
 ## fontconfig Installieren
 #### Windows
@@ -33,7 +33,7 @@ brew install fontconfig
 ### Einstellen
 
 1. Installiere das Plugin
-2. Gebe es in den Benutzer Modul:
+2. Gebe es in dein Benutzer Modul:
 
 ```lua
 local fontconfig = require "plugins.fontconfig"
@@ -43,11 +43,11 @@ fontconfig.use {
 }
 ```
 
-`"sans"` und `"monospace"` kann eine beliebige [fontconfig Syntax sein. (sehe "Font Names")][4]
+`"sans"` und `"monospace"` kann eine beliebige [fontconfig Syntax][4] sein. (sehe "Font Names")
 
 
 Beachte: Die Schriftart könnte nicht sofort laden (Weil wir auf `fc-match` warten müssen).
-Wenn du das haben willst, dann ersetze `fontconfig.use` mit `fontconfig.use_blocking`. Wenn du dass machst dann
+Wenn du es so haben willst, dann ersetze `fontconfig.use` mit `fontconfig.use_blocking`. Wenn du dass machst dann
 muss lite-xl auf `fc-match` warten, was viel langsamer sein kann.
 
 

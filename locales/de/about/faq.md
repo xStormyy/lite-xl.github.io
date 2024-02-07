@@ -1,72 +1,72 @@
 # FAQ
 
-#### Can I get smart autocompletion (intellisense/LSP)?
+#### Kann ich smart autocompletion (intellisense/LSP) bekommen?
 
-Check out the [LSP] plugin.
+Schaue dir das [LSP] Plugin an.
 
-#### Where is the integrated terminal?
+#### Wo ist das integrierte Terminal?
 
-You can try [lite-xl-terminal].
+Du kannst [lite-xl-terminal] ausprobieren.
 
-#### Tabs and indent size?
+#### Tabs und Indent Größe?
 
-In your user config (the cog icon in the file tree):
+In deiner Benutzer Config (Das Zahnrad Symbol im File Tree):
 
 ```lua
-config.tab_type = "soft" -- soft for spaces, hard for real tabs (\t)
-config.indent_size = 4   -- 4 spaces
+config.tab_type = "soft" -- soft für Leerzeichen, hard für echte Tabs (\t)
+config.indent_size = 4   -- 4 Leerzeichen
 ```
 
-#### How to bind commands to keys?
+#### Wie Binde Ich Befehle an Tasten?
 
 ```lua
 local keymap = require "core.keymap"
 keymap.add { ["ctrl+escape"] = "core:quit" }
 ```
 
-#### How to unbind commands for certain keys?
+#### Wie entbinde ich Befehle für Bestimmte Tasten?
 
 ```lua
--- the second parameter lets you override commands for certain keys
--- in this case it maps it to nothing
+-- Das zweite Parameter lässt dir Befehl für bestimmte Tasten überschreiben
+-- in diesem Fall wird es auf nichts gebunden
 keymap.add({ ["ctrl+escape"] = {} }, true)
 ```
 
-#### How to get commands for those keybinds?
+#### Wie bekomme ich die Befehle für diese Tastenkombinationen?
 
-You can search for commands in the command palette.
+Du kannst für Befehl im Command Palette suchen.
 
-For each command, replace the spaces in the right side with dashes.
+Für jedem Befehl, ersetze die Leerzeichen auf der rechten Seite mit Striche.
 
-For example: `Core: Find Command` → `core:find-command`
+Zum Beispiel: `Core: Find Command` → `core:find-command`
 
-#### What version of Lua does Lite XL use?
+#### Welche Lua Version wird von Lite XL benutzt?
 
 Lua 5.4.
 
-#### Vim mode?
+#### Vim modus?
 
-You need to [vibe].
+Dafür brauchst du [vibe].
 
-#### Plugin recommendations
+#### Plugin Empfehlungen
 
-Just in case you don't want to comb through our [plugin repository][1],
-these are a list of plugins that just makes Lite XL a lot more pleasant.
+Im fall dass du nicht unser [Plugin Repository][1] durchforsten möchtest,
+haben wir eine Liste von Plugins gemacht, die Lite XL viel mehr angenehmer machen.
 
-| Plugin               | Use case
+| Plugin               | Verwendungszweck
 | ---                  | ---
-| [autoinsert]         | Automatically insert closing brackets and quotes
-| [bracketmatch]       | Highlight matching brackets
-| [ephemeral_tabs]     | Ephemeral tabs (previewing files without creating multiple tabs)
+| [autoinsert]         | Fügt automatisch schließende Klammern und Anführungszeichen ein
+| [bracketmatch]       | Markiert übereinstimmende Klammern
+| [ephemeral_tabs]     | Vorschau von Dateien ohne der Erstellung von mehrere Tabs (Ephemeral Tabs)
 | [gitdiff_highlight]  | Git diff gutter
-| [lint+]              | Linter support
+| [lint+]              | Linter Unterschützung
 | [minimap]            | Minimap
-| [selectionhighlight] | Highlight code that matches the selection
+| [selectionhighlight] | Hebe Code hervor dass zur Auswahl passt
 | [lite-xl-discord]    | Discord rich presence |
 
-#### Where's feature X? How about Y?
+#### Wo ist Funktion X? Wie wäre es mit Y?
 
-You can get more info in the [Features page](/en/about/features).
+Du kannst mehr Informationen auf unserer [Funktionen Seite](/en/about/features) bekommen.
 
 
 [LSP]:                https://github.com/lite-xl/lite-xl-lsp

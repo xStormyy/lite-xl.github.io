@@ -161,10 +161,10 @@ Wenn du PCRE Regular Expressions anstatt Lua Muster benutzen musst, kannst du da
 
 > Dieser Teil ist **nicht mit dem `symbol` Token-Typ verwandt**.
 
-The symbols section allows you to assign token types to particular keywords or strings - usually reserved words in the language you are highlighting.
-The token type in this section **always take precedence** over token types declared in patterns.
+Dieser Symbol Teil erlaubt dir Token-Typen zu bestimmten Schlüsselwörtern zuzuordnen - normalerweise sind das Wörter in der Sprache dass du hervorhebst.
+Der Token-Typ in diesem Teil nimmt immer Vorrang über Token-Typen deklariert im Muster.
 
-For example this highlights `Host` using the `function` token type, `HostName` as a `keyword` and `yes`, `no`, `any` & `ask` as a `literal`:
+Zum Beispiel, Dieses Code markiert `Host` als `function` Token-Typ, `HostName` als `keyword` und `yes`, `no`, `any` & `ask` als `literal`:
 
 ```lua
 ["Host"]                         = "function",
@@ -176,56 +176,56 @@ For example this highlights `Host` using the `function` token type, `HostName` a
 ["ask"]      = "literal",
 ```
 
-#### Tips: double check your patterns!
+#### Tips: Überprüfe deine Muster!
 
-There are a few common mistakes that can be made when using the `symbols` table in conjunction with patterns.
+Es gibt häufige Fehler die gemacht werden können wenn man das `symbols` Table in Verbindung mit Muster benutzt.
 
-##### Case 1: Spaces between two `symbols` tokens
+##### Fall 1: Leerzeichen zwischen zwei `symbols` Token:
 
-Let's have an example:
+Nehmen wir mal ein Beispiel:
 
 ```lua
 { pattern = "[%a_][%w_]+%s+()[%a_][%w_]+", type = { "keyword2", "symbol" } }
 ```
 
-Let's explain the pattern a bit (omitting the empty parentheses):
+Jetzt erklären wir mal das Muster ein bisschen (Lasse die Leeren Klammer weg):
 
 ```
-[%a_] = any alphabet and underscore
-[%w_] = any alphabet, numbers and underscore
-%s = any whitespace character
+[%a_] = alle Buchstaben und Unterstriche
+[%w_] = alle Buchstaben, Nummern und Unterstriche
+%s = alle Leerzeichen Charaktere
 
 WORD =
-  [%a_] followed by (1 or more [%w_])
+  [%a_] gefolgt von (1 oder mehr [%w_])
 
 pattern =
-  WORD followed by (one or more %s) followed by WORD
+  WORD, gefolgt von (einem oder mehreren %s), gefolgt von WORD
 ```
 
-Afterwards, you add an entry `["my"] = "literal"` in the `symbols` table.
-You test the syntax with `my function` found that `"my"` isn't highlighted as `literal`. Why did that happen?
+Nachher fügst du einen Eintrag `["my"] = "literal"` im `symbols` Table.
+Du kannst die Syntax testen mit `my function`, und findest heraus das `"my"` nicht als `literal` markiert wurde. Warum ist das passiert?
 
-**`symbols` table requires an exact match**.
-If you look carefully, the empty parentheses (`()`) is placed **after the space**!
-This tells Lite XL that `WORD followed by (one or more %s)` is a token, which will match `my ` (note the space in the match).
+**`symbols` table braucht eine genaue Übereinstimmung**.
+Wenn du sorgfältig schaust, siehst du dass leere Klammern **nach dem Leerzeichen** platziert wurden!
+Dass sagt Lite XL dass `[%a_] gefolgt von (1 oder mehr [%w_])` ein Token ist, dass `my ` übereinstimmen soll (bemerke das Leerzeichen in der Übereinstimmung).
 
-The fix is to add a `normal` token for the whitespace between the two tokens:
+Das Lösung steckt darin, ein `normal` Token für Leerzeichen zwischen zwei Tokens hinzuzufügen:
 
 ```lua
 { pattern = "[%a_][%w_]+()%s+()[%a_][%w_]+", type = { "keyword2", "normal", "symbol" } }
 ```
 
-##### Case 2: Patterns & `symbols` tokens
+##### Fall 2: Muster & `symbols` Token
 
-One might assume that Lite XL magically matches text against the `symbols` table. This is not the case.
+Man könnte annehmen dass Lite XL magisch Text mit den `symbols` Table vergleicht. Dies ist nicht der Fall.
 
-In some languages, people may add a generic pattern to delegate the matching to the `symbols` table.
+In manchen Sprachen fügen Leute generische Muster hinzu, um den Abgleich an die Tabelle `symbols` zu delegieren.
 
 ```lua
 { pattern = "[%a_][%w_]*", "symbol" }
 ```
 
-However, the `symbols` table may look like this:
+Jedoch könnte das `symbols` Table so ausschauen:
 
 ```lua
 symbols = {
@@ -234,35 +234,35 @@ symbols = {
 }
 ```
 
-`"my-symbol` contains a dash (`-`) and `"..something_else"` contains 2 dots (`.`).
-None of the characters are matched by `[%a_][%w_]*`!
+`my-symbol` enthält ein Strich (`-`) und `"..something_else"` enthält zwei Punkte (`.`).
+Keinen von diesen Charakteren stimmt mit `[%a_][%w_]*` überein!
 
-**Beware of the text you intend to match in the `symbols` table.**
-**If you want to use it, you need to ensure that it can matched by one of the patterns.**
+**Vorsicht vor dem Text den du im `symbols` Table übereinstimmen willst.**
+**Wenn du es benutzen willst, musst du dir sicher sein, dass es mit einer dieser Muster übereinstimmt.**
 
-The correct patterns are:
+Die richtigen Muster sind:
 
 ```lua
 { pattern = "[%a_][%w%-_]*", "symbol" },
 { pattern = "%.%.[%a_][%w_]*", "symbol" },
 ```
 
-## Testing Your New Syntax
+## Deine neue Syntax testen
 
-To test your new syntax highlighting you need to do two things:
+Um deine neue Syntaxhervorhebung zu testen musst du diesen zwei Dinge machen:
 
-- Reload the Lite XL core
-- Load a file in your chosen language and see how it looks
+- Lade den Lite XL Core neu
+- Lade eine Datei deiner ausgewählten Sprache und schaue an wie es ausschaut
 
-To reload the core, you can either restart Lite XL, or reload the core from the command palette, without needing to restart.
-To do this, type `ctrl+shit+p` to show the command palette, then select `Core: Restart` (or type `crr` or something similar to match it), then press Enter. You will need to restart the core after any changes you make to the syntax highlighting definition.
+Um den Core neuzuladen kannst du entweder Lite XL neustarten, oder du ladest den Core über das Befehlspalette neu.
+Um dies zu machen, drücke `ctrl+shit+` Befehlspalette zu zeigen, dann wähle `Core: Restart` aus (oder schreibe `crr` oder ähnliches um es zu finden), dann drücke Enter. Du musst den Core immer neustarten wenn du änderungen zur Syntaxhervorhebung machst.
 
 
-## Example advanced syntax: Markdown
+## Beispiel des fortschrittlichen Syntax: Markdown
 
-> **Note: This example has features from 2.1. It is not compatible with older versions of lite-xl.**
+> **Bemerke: Dieses Beispiel hat Funktionen von 2.1. Es ist nicht kompatible mit älteren Versionen von lite-xl**
 
-Not all languages are as simple as SSH config files. Markup languages like HTML and Markdown are especially hard to parse correctly. Here's the markdown syntax file in its full glory:
+Nicht alle Sprachen sind so leicht wie SSH config Dateien. Markup Sprache wie HTML und Markdown sind sehr schwer richtig zu analysieren. Hier ist die Markdown Syntaxhervorhebung Datei in seiner vollen Pracht:
 
 ```lua
 -- mod-version:3
@@ -472,37 +472,37 @@ core.add_thread(function()
 end)
 ```
 
-### Syntax fonts (Since 1.16.10)
+### Syntaxschriftarten (Seit 1.16.10)
 
-The syntax allows users to set different font styles (bold, italic, etc.) for different patterns.
-To change the font style of a token, add a Font to `style.syntax_fonts[token_type]`.
-For example:
+Die Syntax erlaubt Benutzer verschiedene Schriftarten Stile (Bold, Italic, usw.) für verschiedene Muster zu setzen.
+Um ein Schriftarten Stil von ein Token zu ändern, füge eine Schriftarten bei `style.syntax_fonts[token_type]` hinzu.
+Zum Beispiel:
 ```
--- will ensure every "fancysyntax_fancy_token" is italic
+-- Wird sorgen, dass jedes "fancysyntax_fancy_token" Italic sein wird.
 style.syntax_fonts["fancysyntax_fancy_token"] = renderer.font.load("myfont.ttf", 14 * SCALE, { italic = true })
 ```
 
-The markdown example automates this with a for loop.
+Das Markdown Beispiele automatisiert dies mit einem for loop.
 
-The limitations here are that fonts cannot be copied with different attributes, thus the font path has to be hardcoded.
-Other than that, abusing `style.syntax_fonts` may lead to **slow performance** and **high memory consumption**.
-This is very obvious when the user tries to resize the editor with `ctrl-scroll` or `ctrl+` and `ctrl-`.
-Please use it in moderation.
+Die Limitationen hier sind dass Schriftarten nicht von anderen Attributen kopiert werden können, also müssen Schriftartenpfade fest codiert werden.
+Der Missbrauch von `style.syntax_fonts` kann zur **langsame Leistung** und einen **hohen Speicherverbrauch** führen.
+Dies ist bemerkbar wenn ein Benutzer versucht die Größe des Editors mit `ctrl-scroll` or `ctrl+` and `ctrl-` zu ändern.
+Bitte benutze es in Moderation.
 
-### Space handling (v2.1 (upcoming) / `master`)
+### Leerzeichen Umgang (v2.1 (Bevorstehend) / `master`)
 
-By default, Lite XL prepends a pattern `{ pattern = "%s+", type = "normal" }` to the syntax.
-This improves the performance drastically on lines that starts with whitespaces (eg. heavily indented lines)
-by matching the whitespace before other patterns in order to prevent Lite XL from iterating the entire syntax.
-However, there may be syntaxes that require matching spaces (eg. Markdown with indented blocks)
-so this can be disabled by setting `space_handling` to `false.`
+Normalerweise stellt Lite XL das Muster `{ pattern = "%s+", type = "normal" }` zu der Syntaxhervorhebung.
+Dies verbessert die Leistung drastisch bei Zeilen die mit Leerzeichen (z.B schwer-eingerücke Zeilen)
+Durchs anpassen des Leerzeichens bevor andere Muster muss Lite XL nicht durch die ganze Syntax durchgehen.
+Jedoch gibt es Syntaxen die Leerzeichen anpassen müssen (z.B Markdown mit einrückten Codeblocken)
+Also kann dies deaktiviert werden indem man `space_handling` to `false.` stellt.
 
-> To keep the space handling optimization or to support older versions of Lite XL,
-> `{ pattern = "%s+", type = "normal" }` can be added after patterns that require space.
+> Um die Leerzeichen Umgang Optimisierung zu behalten, oder um ältere Versionen von Lite XL zu unterstützen kann
+> `{ pattern = "%s+", type = "normal" }` nach Muster, die Leerzeichen brauchen hinzugefügt werden.
 
-### Simple patterns with multiple tokens (v1.16.10)
+### Einfache Muster mit mehrere Tokens (1.16.10)
 
-This is an excerpt taken from the markdown plugin:
+Dies ist ein Ausschnitt dass von der Markdown Syntaxhervorhebung genommen wurde:
 
 ```lua
 local in_squares_match = "^%[%]"
@@ -513,19 +513,19 @@ local in_squares_match = "^%[%]"
 },
 ```
 
-Sometimes it makes sense to highlight different parts of a pattern differently.
-An empty parentheses (`()`) in Lua patterns will return the position of the text in the parentheses.
-This will tell Lite XL when to change the type of token.
-For instance, `^%s*%[%^` is `"function"`, `["..in_squares_match.."]+` is `"number"` and `%]: ` is `"function"`.
+Manchmal macht es Sinn verschiedene Teile eines Musters anderst zu hervorheben.
+Leere Klammer (`()`) in Lua Muster werden die Position vom Text in den Klammern zurückgeben.
+Dies wird Lite XL sagen, wenn es den Typ des Tokens ändern muss.
+Zum Beispiel, `^%s*%[%^` ist `"function"`, `["..in_squares_match.."]+` ist `"number"` und `%]: ` ist `"function"`.
 
-### Subsyntaxes (Since v1.16.10)
+### Subsyntaxen (Seit 1.16.10)
 
-Lite XL supports embedding another syntax into the existing syntax.
-This is used to support code blocks inside the markdown syntax.
+Lite XL unterschützt Einbettung von anderen Syntaxen in einer existierenden Syntax.
+Dies kann benutzt werden, um Codeblöcke im Markdown Syntax zu Unterstützen.
 
-For example:
+Zum Beispiel:
 ```lua
 { pattern = { "```cpp", "```" },        type = "string", syntax = ".cpp" },
 ```
 
-This would highlight `` ```cpp `` and `` ``` `` with `"string"` while everything inside them will be highlighted with a syntax that matches `".cpp"`.
+Dies würde `` ```cpp `` und `` ``` `` mit `"string"` markieren während alles innerhalb mit der Syntax dass mit `".cpp"` übereinstimmt markiert wird.

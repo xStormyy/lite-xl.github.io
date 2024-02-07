@@ -1,15 +1,15 @@
-# Contributors
+# Mitwirkende
 
-| Name                                                        | Contributions
-------------------------------------------------------------|----------------------------------------------------------
-| [rxi](https://github.com/rxi)                              | Original development of lite editor.
-| [Francesco](https://github.com/franko)                     | Creator of lite-xl fork from rxi/lite.
-| [Takase](https://github.com/takase1121)                    | NagView and X Window database resource query for Xft.dpi setting.
-| [Nils Kvist](https://github.com/budRich)                   | Popup window replacement with CommandView dialog.
-| [liquidev](https://github.com/liquidev)                    | Tab style and animations improvements.
-| [Adam](https://github.com/adamharrison)                    | Multi-language syntax highlighting and many other improvements.
-| [Cukmekerb](https://github.com/vincens2005)                | Syntax highlighting improvements.
-| [Janis-Leuenberger](https://github.com/Janis-Leuenberger)  | Add keymap bindings help file and macOS testing.
-| Mat Mariani                                                 | Help for macOS port. Some resources taken from mathewmariani/lite-macos.
-| [daubaris](https://github.com/daubaris)                    | Initial implementation of Xft.dpi query using xrdb command.
-| [Robert Štojs](https://github.com/netrobert)               | Continuos integration configuration.
+| Name                                                       | Beiträge
+-------------------------------------------------------------|----------------------------------------------------------
+| [rxi](https://github.com/rxi)                              | Ursprüngliche Entwicklung des Lite Editors.
+| [Francesco](https://github.com/franko)                     | Autor des lite-xl Forks von rxi/lite.
+| [Takase](https://github.com/takase1121)                    | NagView und X Window Datenbank Ressourcen für Xft.dpi Einstellung.
+| [Nils Kvist](https://github.com/budRich)                   | Popup Fenster Ersatz mit CommandView Dialog.
+| [liquidev](https://github.com/liquidev)                    | Tab Stil und Animationen Verbesserungen.
+| [Adam](https://github.com/adamharrison)                    | Mehrsprachige Syntaxhervorhebung und viele andere Verbesserungen.
+| [Cukmekerb](https://github.com/vincens2005)                | Syntaxhervorhebung Verbesserungen.
+| [Janis-Leuenberger](https://github.com/Janis-Leuenberger)  | Hilfedatei für Tastaturbelegungen und MacOS Testungen.
+| Mat Mariani                                                | Hilfe mit MacOS Port. Paar Ressourcen von mathewmariani/lite-macos.
+| [daubaris](https://github.com/daubaris)                    | Anfängliche Implementation von Xft.dpi Query mit xrdb Befehl.
+| [Robert Štojs](https://github.com/netrobert)               | Continuous Integration Konfiguration.

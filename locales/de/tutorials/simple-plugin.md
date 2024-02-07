@@ -184,7 +184,7 @@ keymap.add {
 
 ### Zusätzliches
 - [Lite: Eine Implementation Übersicht (English)][3], ein exzellentes Post von rxi dass meistens zu lite-xl relevant bleibt.
-- [API Übersicht][4], wo mache APIs erklärt werden.
+- [API Übersicht (English)][4], wo mache APIs erklärt werden.
 
 
 [1]: https://devhints.io/lua
