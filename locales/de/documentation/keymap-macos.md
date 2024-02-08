@@ -1,13 +1,12 @@
 # MacOS Keymap
 
-Keymaps on different operating systems have the same functionality, just bound slightly differently
-in order to conform to normal expectations for that operating system.
+Tastaturkürzeln haben die gleichen Funktionen auf jeden Betriebssystem, sie sind einfach nur anders gebunden.
+Um sich für normale Erwartungen für dem Betriebssystem anzupassen.
 
-Currently, there are only two operating system layouts. MacOS, and [everything else](/en/documentation/keymap).
-
+Momentan gibt es nur two Betriebssystemlayouts. MacOS, und [alles andere](/en/documentation/keymap).
 ## Keymap
 
-|Key Combination|Actions|
+|Tasten Kombination|Aktionen|
 |---------------|-------|
 |`cmd`+`/`|`doc:toggle-line-comments`|
 |`cmd`+`1`|`root:switch-to-tab-1`|

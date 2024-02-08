@@ -24,17 +24,17 @@ local keymap = require "core.keymap"
 keymap.add { ["ctrl+escape"] = "core:quit" }
 ```
 
-#### Wie entbinde ich Befehle für Bestimmte Tasten?
+#### Wie entbinde ich Befehle für bxestimmte Tasten?
 
 ```lua
--- Das zweite Parameter lässt dir Befehl für bestimmte Tasten überschreiben
+-- Das zweite Parameter lässt dir Befehle für bestimmte Tasten überschreiben
 -- in diesem Fall wird es auf nichts gebunden
 keymap.add({ ["ctrl+escape"] = {} }, true)
 ```
 
 #### Wie bekomme ich die Befehle für diese Tastenkombinationen?
 
-Du kannst für Befehl im Command Palette suchen.
+Du kannst für Befehle im Command Palette suchen.
 
 Für jedem Befehl, ersetze die Leerzeichen auf der rechten Seite mit Striche.
 

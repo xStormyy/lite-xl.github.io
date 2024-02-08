@@ -1,13 +1,13 @@
-# Default Keymap
+# Standard Keymap
 
-Keymaps on different operating systems have the same functionality, just bound slightly differently
-in order to conform to normal expectations for that operating system.
+Tastaturkürzeln haben die gleichen Funktionen auf jeden Betriebssystem, sie sind einfach nur anders gebunden.
+Um sich für normale Erwartungen für dem Betriebssystem anzupassen.
 
-Currently, there are only two operating system layouts. [MacOS](/en/documentation/keymap-macos), and everything else.
+Momentan gibt es nur two Betriebssystemlayouts. [MacOS](/en/documentation/keymap-macos), und alles andere.
 
 ## Keymap
 
-|Key Combination|Actions|
+|Tasten Kombination|Aktionen|
 |---------------|-------|
 |`alt`+`1`|`root:switch-to-tab-1`|
 |`alt`+`2`|`root:switch-to-tab-2`|

@@ -6,7 +6,7 @@ Binär Packete sind verfügbar in der [GitHub Veröffentlichungen Seite][1].
 
 ## Installieren über Packeten Management
 
-Oder du kannst Lite-XL über den Paketmanager Ihrer Distribution installieren.
+Oder du kannst Lite-XL über den Paketmanager deiner Distribution installieren.
 **Diese Packete werden von der Community erhalten und sind vielleicht veraltet.**
 
 - [Windows][2] ([Chocolatey][3] / [Scoop][4])
