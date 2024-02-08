@@ -27,10 +27,10 @@ bash build-packages.sh -h
 ```
 
 Der Script wird Meson ausführen und erstellt ein tar komprimiertes Archiv mit der Anwendung, oder
-für Windows, eine zip Datei. Lite XL can leicht installiert werden, indem man das Archiv auspackt.
+für Windows, eine zip Datei. Lite XL kann leicht installiert werden, indem man das Archiv auspackt.
 
 Unter Windows werden zwei Packete erstellt, eines heißt "portable" dass den Datenordner neben der Ausführbarendatei haben wird.
-Das andere Packet benutzt ein unix-ähnlichen Layout, es ist gemeint für die Leute, die ein unix-ähnliches Shell und Befehlzeile benutzen.
+Das andere Packet benutzt ein unix-ähnlichen Layout, es ist gemeint für die Leute, die ein unix-ähnliches Shell und Befehlszeile benutzen.
 
 Bitte bemerke dass es keine fest codierte Ordner in der Ausführenbarendatei gibt, also können Packete in allen Ordnern benutzt werden.
 
@@ -67,9 +67,9 @@ meson compile -C build
 DESTDIR="$(pwd)/lite-xl" meson install --skip-subprojects -C build
 ```
 
-Wo `<prefix>` ist hängt von dein Betriebssystem ab:
-- Auf Linux ist es `/usr`
-- auf MacOS kann es `"/Lite XL.app"` sein
+Wo `<prefix>` ist, hängt von dein Betriebssystem ab:
+- Auf Linux ist es in `/usr` sein
+- Auf MacOS kann es in `"/Lite XL.app"` sein
 
 Wenn du eine Version von Meson benutzt die unter 0.54 ist, musst du andere Befehle benutzen:
 
@@ -82,7 +82,7 @@ ninja -C build install
 ## MacOS
 
 MacOS ist voll unterstützt und eine notarierte App-Disk-Image ist auf der [Veröffenlichungsseite][1] bereitgestellt.
-Die Anwendungen kann mit den Schritten oben kompiliert werden.
+Die Anwendung kann mit den Schritten oben kompiliert werden.
 
 ## Windows MSYS2
 
@@ -90,7 +90,7 @@ Die Bauumgebung für Lite XL auf Windows ist [MSYS2][2].
 Folge die Installationsschritte im Link.
 
 - Öffne `MinGW 64-bit` oder `MinGW 32-bit` vom Startmenü
-- Aktualisiere die MSYS" Installation mit `pacman -Syu`
+- Aktualisiere die "MSYS" Installation mit `pacman -Syu`
 - Starte Shell neu
 - Installiere die Abhängigkeiten:
 
@@ -105,9 +105,6 @@ pacman -S \
   ${MINGW_PACKAGE_PREFIX}-SDL2
 pip3 install meson
 ```
-
-`${MINGW_PACKAGE_PREFIX}` expands either to `mingw-w64-i686` or `mingw-w64-x86_64`
-depending if the current shell is 32 or 64 bit.
 
 `${MINGW_PACKAGE_PREFIX}` ist entweder auf `mingw-w64-i686` oder `mingw-w64-x86_64`
 abhängig ob deine Shell 32- oder 64bit ist.

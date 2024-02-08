@@ -2,9 +2,9 @@
 
 ## Binary Packete
 
-Binär Packete sind verfügbar in der [GitHub Veröffentlichungen Seite][1].
+Binär Packete sind verfügbar in der [GitHub Veröffentlichungensseite][1].
 
-## Installieren über Packeten Management
+## Installieren über Packetverwaltung
 
 Oder du kannst Lite-XL über den Paketmanager deiner Distribution installieren.
 **Diese Packete werden von der Community erhalten und sind vielleicht veraltet.**

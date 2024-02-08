@@ -17,14 +17,14 @@ config.tab_type = "soft" -- soft für Leerzeichen, hard für echte Tabs (\t)
 config.indent_size = 4   -- 4 Leerzeichen
 ```
 
-#### Wie Binde Ich Befehle an Tasten?
+#### Wie binde ich Befehle an Tasten?
 
 ```lua
 local keymap = require "core.keymap"
 keymap.add { ["ctrl+escape"] = "core:quit" }
 ```
 
-#### Wie entbinde ich Befehle für bxestimmte Tasten?
+#### Wie entbinde ich Befehle für bestimmte Tasten?
 
 ```lua
 -- Das zweite Parameter lässt dir Befehle für bestimmte Tasten überschreiben

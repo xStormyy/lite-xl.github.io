@@ -1,7 +1,7 @@
 # Standard Keymap
 
-Tastaturkürzeln haben die gleichen Funktionen auf jeden Betriebssystem, sie sind einfach nur anders gebunden.
-Um sich für normale Erwartungen für dem Betriebssystem anzupassen.
+Tastaturkürzeln haben die gleichen Funktionen auf jeden Betriebssystem, sie sind einfach nur anders gebunden
+um sich für normale Erwartungen für dem Betriebssystem anzupassen.
 
 Momentan gibt es nur two Betriebssystemlayouts. [MacOS](/en/documentation/keymap-macos), und alles andere.
 
