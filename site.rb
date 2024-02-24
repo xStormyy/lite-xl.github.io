@@ -75,6 +75,8 @@ files = Dir
           .gsub("{{ page }}", contents)
           .gsub("{{ title }}", title)
           .gsub("{{ id }}", id)
+          .gsub("{{ lang }}", locale)
+          .gsub("{{ path }}", File.join(Pathname(basename).each_filename.map { |component| component == "index" ? "" : slugify(component) }))
         File.write(root + target, contents)
 
         if generateIndex
